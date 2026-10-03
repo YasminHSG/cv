@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yasmin Hadj-Said · Ingénieure Systèmes Microélectroniques &amp; Management</title>
+<meta name="description" content="Étudiante ingénieure à l'École des Mines de Saint-Étienne : FPGA, systèmes embarqués, robotique, management.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f9fa;--grid:rgba(0,0,0,.045);--card:#fff;--ink:#1f2937;--head:#111827;--mute:#6b7280;--line:#e1e4e8;--acc:#c25934}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#111315;--grid:rgba(255,255,255,.05);--card:#181b1e;--ink:#d5d9df;--head:#f3f4f6;--mute:#8c94a1;--line:#2b3036;--acc:#e8825a}}
+:root[data-theme=dark]{--bg:#111315;--grid:rgba(255,255,255,.05);--card:#181b1e;--ink:#d5d9df;--head:#f3f4f6;--mute:#8c94a1;--line:#2b3036;--acc:#e8825a}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px;color:var(--ink);font:400 1rem/1.65 Inter,system-ui,sans-serif}
+a{color:var(--acc)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+h1,h2,h3,h4{margin:0;color:var(--head)}
+aside{position:fixed;inset:0 auto 0 0;width:280px;padding:2.5rem 1.5rem 2rem 3rem;display:flex;flex-direction:column;justify-content:space-between;z-index:5}
+aside h2{font:400 .72rem "Space Mono",monospace;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-bottom:2.5rem}
+#idx{position:relative;margin:0;padding:0 0 0 1.5rem;list-style:none;border-left:1px solid var(--line)}
+#idx li{margin:0 0 1rem}
+#idx a{display:block;font:400 .8rem "Space Mono",monospace;color:var(--mute);text-decoration:none;transition:color .2s}
+#idx a:hover{color:var(--ink)}
+#idx a.on{color:var(--head);font-weight:700}
+#dot{position:absolute;left:-4.5px;top:0;width:8px;height:8px;border-radius:50%;background:var(--acc);transition:transform .3s ease}
+.side-foot{font:.72rem "Space Mono",monospace;color:var(--mute);display:flex;flex-direction:column;gap:.8rem;align-items:flex-start}
+#th{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:6px;padding:.3rem .7rem;font:.72rem "Space Mono",monospace;cursor:pointer}
+main{margin-left:280px;padding:3rem 2rem 6rem;display:flex;justify-content:center}
+.col{width:100%;max-width:760px}
+section{padding-top:6rem;scroll-margin-top:1rem}
+#intro{padding-top:3rem}
+.h{display:flex;gap:.75rem;align-items:baseline;margin-bottom:1.6rem}
+.h span:first-child{font:.85rem "Space Mono",monospace;color:var(--mute)}
+.h span:last-child{color:var(--acc);font-size:.85rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.kick{font:.78rem "Space Mono",monospace;color:var(--acc);letter-spacing:.12em;text-transform:uppercase;margin:0 0 1rem}
+#intro h1{font-weight:300;font-size:clamp(2.2rem,6vw,3.4rem);letter-spacing:-.02em;line-height:1.12}
+#intro h1 b{font-weight:600}
+#intro p.sub{color:var(--mute);margin:1rem 0 1.6rem;max-width:34rem}
+.ecg{display:block;width:100%;height:90px;margin:2rem 0 0}
+.ecg path{fill:none;stroke:var(--acc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1600;stroke-dashoffset:1600;animation:d 3.2s ease-out forwards}
+@keyframes d{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.ecg path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+.btn{display:inline-block;padding:.6rem 1.1rem;border:1px solid var(--acc);border-radius:6px;font:.8rem "Space Mono",monospace;text-decoration:none;color:var(--acc);margin-right:.5rem}
+.btn.f{background:var(--acc);color:var(--bg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,.03);padding:1.4rem 1.5rem;position:relative;overflow:hidden;transition:box-shadow .3s}
+.card:hover{box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.card::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--acc),transparent);opacity:.5}
+.when{font:.7rem "Space Mono",monospace;color:var(--mute);margin:0 0 .6rem}
+.card h3{font-size:.95rem;font-weight:500;margin-bottom:.4rem}
+.card p{margin:0;font-size:.88rem;color:var(--mute);line-height:1.6}
+.card p+p{margin-top:.5rem}
+.stack{display:grid;gap:1rem}
+.lead{font-size:.95rem;line-height:1.75;margin:0 0 1rem}
+.meta{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font:.72rem "Space Mono",monospace;color:var(--mute)}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:.15rem .6rem;font:.68rem "Space Mono",monospace;color:var(--mute);margin:.9rem .4rem 0 0}
+.tl{position:relative;margin:0;padding:0 0 0 1.5rem;list-style:none;border-left:1px solid var(--line)}
+.tl li{position:relative;margin-bottom:2rem}
+.tl li::before{content:"";position:absolute;left:calc(-1.5rem - 7px);top:.2rem;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--line)}
+.tl li.n::before{border-color:var(--acc)}
+.tl p{margin:.3rem 0 0;font-size:.88rem;color:var(--mute)}
+.tl p.when{margin:0 0 .4rem}
+.tl h3{font-size:.95rem;font-weight:500}
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.tabs button{font:.72rem "Space Mono",monospace;padding:.4rem .8rem;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--ink);cursor:pointer}
+.tabs button[aria-pressed=true]{border-color:var(--acc);background:var(--acc);color:var(--bg)}
+.hide{display:none!important}
+details.card{padding:0}
+summary{cursor:pointer;list-style:none;padding:1.2rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:1.3rem "Space Mono",monospace;color:var(--acc);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+summary h3{margin:0}
+summary .when{margin:0 0 .3rem}
+.in{padding:0 1.5rem 1.3rem;font-size:.88rem;color:var(--mute)}
+.in h4{font:.7rem "Space Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);margin:1rem 0 .3rem}
+.in ul{margin:0;padding-left:1.1rem}
+.in p{margin:0 0 .3rem}
+.g2{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-bottom:2rem}
+.card h4{font:.7rem "Space Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:.8rem}
+.chip{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:.2rem .65rem;font:.72rem "Space Mono",monospace;margin:0 .4rem .4rem 0;color:var(--ink)}
+.ct{display:grid;gap:.4rem}
+.ct a,.ct span{font:.82rem "Space Mono",monospace;color:var(--ink);text-decoration:none}
+.ct a:first-child{color:var(--acc)}
+footer{font:.72rem "Space Mono",monospace;color:var(--mute);margin-top:4rem}
+@media(max-width:860px){
+aside{position:sticky;top:0;width:100%;padding:.6rem 1rem;flex-direction:row;align-items:center;gap:.8rem;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+aside h2,#dot,.side-foot span{display:none}
+aside>div:first-child{overflow-x:auto;flex:1;scrollbar-width:none}
+#idx{display:flex;gap:1.2rem;border:0;padding:0}
+#idx li{margin:0;white-space:nowrap}
+#idx a.on{color:var(--acc)}
+main{margin:0;padding:1rem 1.2rem 4rem}
+section{scroll-margin-top:60px;padding-top:4rem}
+#intro{padding-top:2rem}
+}
+</style>
+</head>
+<body>
+<aside>
+<div><h2>Index</h2>
+<ul id="idx"><span id="dot"></span>
+<li><a href="#intro" class="on">00 — intro</a></li>
+<li><a href="#profil">01 — profil</a></li>
+<li><a href="#formation">02 — formation</a></li>
+<li><a href="#experiences">03 — expériences</a></li>
+<li><a href="#projets">04 — projets</a></li>
+<li><a href="#engagement">05 — engagement</a></li>
+<li><a href="#competences">06 — compétences</a></li>
+<li><a href="#langues">07 — langues</a></li>
+<li><a href="#interets">08 — intérêts</a></li>
+<li><a href="#contact">09 — contact</a></li>
+</ul></div>
+<div class="side-foot"><span>Savigny-sur-Orge, France</span><button id="th" aria-label="Changer de thème">◐ thème</button></div>
+</aside>
+
+<main><div class="col">
+
+<section id="intro">
+<p class="kick">Yasmin Hadj-Said</p>
+<h1>Ingénieure <b>Systèmes Microélectroniques</b> &amp; Management</h1>
+<p class="sub">Étudiante à l'École des Mines de Saint-Étienne. FPGA, systèmes embarqués, robotique.</p>
+<a class="btn f" href="#projets">voir les projets</a><a class="btn" href="#contact">me contacter</a>
+
+<svg class="ecg" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 50 Q 75 10, 150 50 T 300 50 T 450 50 T 600 50 T 750 50 T 900 50 T 1050 50 T 1200 50"/>
+</svg>
+
+</section>
+
+<section id="profil">
+<div class="h"><span>01</span><span>· Profil</span></div>
+<p class="lead">Étudiante à l'École des Mines de Saint-Étienne dans le cursus Systèmes Microélectroniques et Informatique, je suis en train de compléter ma formation avec un DESS en administration des affaires à HEC Montréal afin d'acquérir une double compétence technique et managériale.</p>
+<p class="meta"><span>Nationalité française</span><span><span id="age">22</span> ans · née le 12 mai 2004 à Rio de Janeiro</span><span>Savigny-sur-Orge, France</span></p>
+</section>
+
+<section id="formation">
+<div class="h"><span>02</span><span>· Formation</span></div>
+<ol class="tl">
+<li class="n"><p class="when">2026 — 2027</p><h3>DESS en administration des affaires</h3><p>HEC Montréal · double compétence technique et managériale.</p></li>
+<li class="n"><p class="when">2024 — 2027</p><h3>École Nationale Supérieure des Mines de Saint-Étienne</h3><p>Cursus ingénieur Systèmes Microélectroniques et Informatique. Formation de prévention des violences sexistes et sexuelles (VSS).</p></li>
+<li><p class="when">2021 — 2024</p><h3>Lycée Saint-Louis, Paris</h3><p>Classes préparatoires aux grandes écoles : MPSI, MP.</p></li>
+<li><p class="when">2020</p><h3>Lycée Molière, Rio de Janeiro</h3><p>Baccalauréat scientifique, mention Très Bien, major de promo.</p></li>
+<li><p class="when">2019</p><h3>DELE niveau B2</h3><p>Diploma de Español como Lengua Extranjera.</p></li>
+</ol>
+</section>
+
+<section id="experiences">
+<div class="h"><span>03</span><span>· Expériences</span></div>
+<div class="stack">
+<article class="card"><p class="when">Avril — juillet 2026</p><h3>Stage · Renault</h3><p>Technocentre de Guyancourt, After Sales Engineering — UET Diagnostic. Outil de gestion et de monitoring des activités de validation des outils Après-Vente.</p></article>
+<article class="card"><p class="when">2025</p><h3>Cheffe d'entreprise</h3><p>Création d'un cabinet conseil innovant appliquant l'intelligence artificielle à la mobilité internationale.</p><p><a href="https://visalog.dz/" target="_blank" rel="noopener">visalog.eu</a></p></article>
+<article class="card"><p class="when">Juillet 2025</p><h3>Stage · FACOFRI, Algérie</h3><p>Intégration d'un bras robotisé pour l'automatisation d'une presse plieuse ; programme Python simulant le pilotage, avec commande de pédale automatisée.</p></article>
+<article class="card"><p class="when">Janvier 2025</p><h3>Stage · EDF, siège (Paris)</h3><p>Direction des Services Informatiques et du Numérique, Direction Commerce, équipe CSC Supervision. Outil de gestion des demandes d'autorisation de l'équipe.</p></article>
+<article class="card"><p class="when">2019 — 2021</p><h3>Soutien scolaire</h3><p>Cours de mathématiques et de physique pour des lycéens.</p></article>
+<article class="card"><p class="when">2018</p><h3>Stage · EDF Brésil</h3><p>Immersion dans une entreprise française à l'étranger : finance, production, RH, juridique, environnement.</p></article>
+</div>
+</section>
+
+<section id="projets">
+<div class="h"><span>04</span><span>· Projets</span></div>
+<div class="tabs" role="group" aria-label="Filtrer les projets">
+<button aria-pressed="true" data-f="all">tous</button><button aria-pressed="false" data-f="elec">électronique &amp; fpga</button><button aria-pressed="false" data-f="robo">robotique</button><button aria-pressed="false" data-f="rech">études</button></div>
+<div class="stack" id="pj">
+<article class="card" data-t="elec"><p class="when">2025</p><h3>Monitoring ECG sécurisé</h3><p>Acquisition temps réel sur FPGA Zynq-7020, gestion I2C/UART via FSM, chiffrement matériel ASCON, SystemVerilog sous Vivado et outil Python de déchiffrement et de visualisation.</p><span class="tag">FPGA</span><span class="tag">SystemVerilog</span><span class="tag">Python</span></article>
+<article class="card" data-t="elec"><p class="when">2025</p><h3>Chiffrement ASCON-128</h3><p>Implémentation de l'algorithme en SystemVerilog dans un projet de conception de systèmes numériques.</p><span class="tag">SystemVerilog</span><span class="tag">Cryptographie</span></article>
+<article class="card" data-t="elec"><p class="when">2025</p><h3>Projet IoT</h3><p>Solution de surveillance environnementale avec communication LoRa à faible portée.</p><span class="tag">IoT</span><span class="tag">LoRa</span></article>
+<article class="card" data-t="elec"><p class="when">2025</p><h3>Flappy Bird capacitif</h3><p>Prototypage d'un jeu Flappy Bird piloté par un capteur capacitif.</p><span class="tag">Capteurs</span><span class="tag">Prototypage</span></article>
+<article class="card" data-t="robo"><p class="when">2025</p><h3>Coupe de France de Robotique</h3><p>Coordination d'une équipe de 10 personnes ; électronique et modélisation 3D, dans le respect du cahier des charges et des délais.</p><span class="tag">Robotique</span><span class="tag">Équipe</span></article>
+<article class="card" data-t="robo"><p class="when">2024</p><h3>Victoire au Hackathon</h3><p>Compétition par équipe organisée par l'AREM avec STMicroelectronics, à Gardanne.</p><span class="tag">Hackathon</span><span class="tag">STMicroelectronics</span></article>
+<article class="card" data-t="rech"><p class="when">2023 — 2024</p><h3>Glisse d'un ski</h3><p>Étude en laboratoire et conception d'un simulateur de pente glacée.</p><span class="tag">Expérimentation</span></article>
+<article class="card" data-t="rech"><p class="when">2022 — 2023</p><h3>Éoliennes verticales Savonius</h3><p>Étude de ces éoliennes dans l'espace urbain contemporain, avec test d'un prototype conçu par l'équipe.</p><span class="tag">Énergie</span><span class="tag">Modélisation</span></article>
+</div>
+</section>
+
+<section id="engagement">
+<div class="h"><span>05</span><span>· Engagement</span></div>
+<div class="stack">
+<details class="card" open><summary><div><p class="when">2025 — 2026</p><h3>Présidente de l'AREM</h3></div></summary><div class="in">
+<p>Association de Robotique et Électronique des Mines : leadership technique en robotique et implication dans la vie étudiante.</p>
+<h4>Management et gouvernance</h4><ul><li>Équipe de 14 personnes, tenue des conseils d'administration.</li><li>Nouvel organigramme et entretiens de recrutement du mandat EI25 (environ 10 heures).</li></ul>
+<h4>Partenariats</h4><ul><li>Représentante légale et porte-parole auprès de l'école et des partenaires.</li><li>Subvention FDVA de 2 300 € obtenue (dossier Mairie de Gardanne).</li><li>Négociation avec des industriels majeurs, dont Alstom et STMicroelectronics.</li></ul>
+<h4>Événements</h4><ul><li>Coupe de France de Robotique 2025, préparation de 2026, Hackathon de programmation de robots.</li><li>Paquathon (50 participants) et Défi Actionneurs, initiation à la robotique pour les première année.</li><li>Intégration : soirée AREM, comité d'intégration, « Famille Verte ».</li></ul>
+<h4>Communication</h4><ul><li>Kakémonos, dépliants, plaquettes, T-shirts du mandat, porte-clés imprimés en 3D.</li></ul></div></details>
+<details class="card"><summary><div><p class="when">2025</p><h3>Ingénieurs Solidaires en Action (ISA)</h3></div></summary><div class="in"><p>Gestion de projet pour l'Association Accompagnement Initiative (Gardanne) : journée bien-être pour des personnes à faibles revenus, avec contacts professionnels et entreprises donatrices, logistique, autofinancement et coordination des bénévoles.</p></div></details>
+<details class="card"><summary><div><p class="when">2025 — 2026</p><h3>Capitaine · équipe féminine de volley-ball</h3></div></summary><div class="in"><p>Coordination de l'équipe, cohésion de groupe, planification des créneaux et interface avec les équipes adverses de la ligue universitaire.</p></div></details>
+<details class="card"><summary><div><p class="when">2025 — 2026</p><h3>Bureau des Internationaux</h3></div></summary><div class="in"><p>Accueil et intégration des étudiants internationaux, événements de promotion des cultures (repas internationaux).</p></div></details>
+<details class="card"><summary><div><p class="when">2025 — 2026</p><h3>COMIF · T'ipause</h3></div></summary><div class="in"><p>Service et accueil à la cafétéria associative, distribution de repas aux étudiants du campus (rythme bimensuel).</p></div></details>
+<details class="card"><summary><div><p class="when">2025</p><h3>Sensibilisation et science</h3></div></summary><div class="in"><ul><li>Broyage Extrême : sensibilisation au recyclage du PLA lors de la journée ODD.</li><li>Fête de la Science : organisation sur plusieurs mois (avril à octobre), gestion des stands.</li></ul></div></details>
+</div>
+</section>
+
+<section id="competences">
+<div class="h"><span>06</span><span>· Compétences</span></div>
+<div class="g2">
+<div class="card"><h4>Programmation</h4><span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">SystemVerilog</span><span class="chip">Bash</span><span class="chip">SQL</span></div>
+<div class="card"><h4>Systèmes embarqués</h4><span class="chip">STM32CubeIDE</span><span class="chip">Arduino</span></div>
+<div class="card"><h4>Conception et modélisation</h4><span class="chip">Inventor</span><span class="chip">KiCad</span><span class="chip">Comsol</span><span class="chip">Matlab</span></div>
+<div class="card"><h4>Autres outils</h4><span class="chip">LaTeX</span><span class="chip">MS Office</span></div>
+</div>
+</section>
+
+<section id="langues">
+<div class="h"><span>07</span><span>· Langues</span></div>
+<div class="g2">
+<div class="card"><h4>Bilingue</h4><span class="chip">Français (Maternelle)</span><span class="chip">Portugais (Maternelle)</span></div>
+<div class="card"><h4>Opérationnel (C1 / B2)</h4><span class="chip">Anglais (C1)</span><span class="chip">Espagnol (B2 DELE)</span></div>
+<div class="card"><h4>Intermédiaire</h4><span class="chip">Arabe (A2)</span></div>
+</div>
+</section>
+
+<section id="interets">
+<div class="h"><span>08</span><span>· Centres d'intérêt</span></div>
+<div class="g2">
+<div class="card"><h4>Sports & Loisirs</h4><span class="chip">Volley-ball</span><span class="chip">Guitare</span></div>
+<div class="card"><h4>Technologie</h4><span class="chip">Robotique</span></div>
+<div class="card"><h4>Voyages</h4><span class="chip">Europe</span><span class="chip">Afrique</span><span class="chip">Amérique du Sud</span></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="h"><span>09</span><span>· Contact</span></div>
+<div class="card ct"><a href="mailto:yasmin.hadjsaid@gmail.com">yasmin.hadjsaid@gmail.com</a><a href="tel:+33771179278">+33 7 7117 9278</a><span>55, avenue Carnot, 91600 Savigny-sur-Orge</span></div>
+<footer>© Yasmin Hadj-Said</footer>
+</section>
+
+</div></main>
+
+<script>
+(function(){var b=new Date(2004,4,12),n=new Date(),a=n.getFullYear()-b.getFullYear();if(n<new Date(n.getFullYear(),4,12))a--;document.getElementById('age').textContent=a})();
+document.getElementById('th').onclick=function(){var r=document.documentElement,d=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme: dark)').matches);r.dataset.theme=d?'light':'dark'};
+document.querySelectorAll('.tabs button').forEach(function(b){b.onclick=function(){document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});document.querySelectorAll('#pj .card').forEach(function(c){c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.t!==b.dataset.f)})}});
+var ls=document.querySelectorAll('#idx a'),dot=document.getElementById('dot');
+function mark(a){if(!a)return;ls.forEach(function(x){x.classList.toggle('on',x===a)});dot.style.transform='translateY('+(a.parentNode.offsetTop+a.offsetHeight/2-4)+'px)';if(innerWidth<=860)a.scrollIntoView({block:'nearest',inline:'center'})}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){mark(document.querySelector('#idx a[href="#'+e.target.id+'"]'))}})},{rootMargin:'-35% 0px -60% 0px'});
+document.querySelectorAll('section[id]').forEach(function(s){io.observe(s)});
+mark(ls[0]);addEventListener('resize',function(){mark(document.querySelector('#idx a.on')||ls[0])});
+</script>
+</body>
+</html>
