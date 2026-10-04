@@ -11,594 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   
-  <style>
-    /* Variables & Thèmes */
-    :root {
-      --bg: #f8f9fa;
-      --grid: rgba(0, 0, 0, .045);
-      --card: #fff;
-      --ink: #1f2937;
-      --head: #111827;
-      --mute: #6b7280;
-      --line: #e1e4e8;
-      --acc: #c25934;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #111315;
-        --grid: rgba(255, 255, 255, .05);
-        --card: #181b1e;
-        --ink: #d5d9df;
-        --head: #f3f4f6;
-        --mute: #8c94a1;
-        --line: #2b3036;
-        --acc: #e8825a;
-      }
-    }
-
-    :root[data-theme="dark"] {
-      --bg: #111315;
-      --grid: rgba(255, 255, 255, .05);
-      --card: #181b1e;
-      --ink: #d5d9df;
-      --head: #f3f4f6;
-      --mute: #8c94a1;
-      --line: #2b3036;
-      --acc: #e8825a;
-    }
-
-    /* Base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background-color: var(--bg);
-      background-image: 
-        linear-gradient(var(--grid) 1px, transparent 1px),
-        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-      background-size: 24px 24px;
-      color: var(--ink);
-      font: 400 1rem/1.65 Inter, system-ui, sans-serif;
-    }
-
-    a {
-      color: var(--acc);
-    }
-
-    a:focus-visible, 
-    button:focus-visible, 
-    summary:focus-visible {
-      outline: 2px solid var(--acc);
-      outline-offset: 3px;
-    }
-
-    h1, h2, h3, h4 {
-      margin: 0;
-      color: var(--head);
-    }
-
-    /* Sidebar / Aside */
-    aside {
-      position: fixed;
-      inset: 0 auto 0 0;
-      width: 280px;
-      padding: 2.5rem 1.5rem 2rem 3rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      z-index: 5;
-    }
-
-    aside h2 {
-      font: 400 .72rem "Space Mono", monospace;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--mute);
-      margin-bottom: 2.5rem;
-    }
-
-    #idx {
-      position: relative;
-      margin: 0;
-      padding: 0 0 0 1.5rem;
-      list-style: none;
-      border-left: 1px solid var(--line);
-    }
-
-    #idx li {
-      margin: 0 0 1rem;
-    }
-
-    #idx a {
-      display: block;
-      font: 400 .8rem "Space Mono", monospace;
-      color: var(--mute);
-      text-decoration: none;
-      transition: color .2s;
-    }
-
-    #idx a:hover {
-      color: var(--ink);
-    }
-
-    #idx a.on {
-      color: var(--head);
-      font-weight: 700;
-    }
-
-    #dot {
-      position: absolute;
-      left: -4.5px;
-      top: 0;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--acc);
-      transition: transform .3s ease;
-    }
-
-    .side-foot {
-      font: .72rem "Space Mono", monospace;
-      color: var(--mute);
-      display: flex;
-      flex-direction: column;
-      gap: .8rem;
-      align-items: flex-start;
-    }
-
-    #th {
-      border: 1px solid var(--line);
-      background: var(--card);
-      color: var(--ink);
-      border-radius: 6px;
-      padding: .3rem .7rem;
-      font: .72rem "Space Mono", monospace;
-      cursor: pointer;
-    }
-
-    /* Main Layout */
-    main {
-      margin-left: 280px;
-      padding: 3rem 2rem 6rem;
-      display: flex;
-      justify-content: center;
-    }
-
-    .col {
-      width: 100%;
-      max-width: 760px;
-    }
-
-    section {
-      padding-top: 6rem;
-      scroll-margin-top: 1rem;
-    }
-
-    #intro {
-      padding-top: 3rem;
-    }
-
-    .h {
-      display: flex;
-      gap: .75rem;
-      align-items: baseline;
-      margin-bottom: 1.6rem;
-    }
-
-    .h span:first-child {
-      font: .85rem "Space Mono", monospace;
-      color: var(--mute);
-    }
-
-    .h span:last-child {
-      color: var(--acc);
-      font-size: .85rem;
-      font-weight: 600;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    /* Typographie Spécifique */
-    .kick {
-      font: .78rem "Space Mono", monospace;
-      color: var(--acc);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin: 0 0 1rem;
-    }
-
-    #intro h1 {
-      font-weight: 300;
-      font-size: clamp(2.2rem, 6vw, 3.4rem);
-      letter-spacing: -.02em;
-      line-height: 1.12;
-    }
-
-    #intro h1 b {
-      font-weight: 600;
-    }
-
-    #intro p.sub {
-      color: var(--mute);
-      margin: 1rem 0 1.6rem;
-      max-width: 34rem;
-    }
-
-    /* Animation ECG */
-    .ecg {
-      display: block;
-      width: 100%;
-      height: 90px;
-      margin: 2rem 0 0;
-    }
-
-    .ecg path {
-      fill: none;
-      stroke: var(--acc);
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-dasharray: 1600;
-      stroke-dashoffset: 1600;
-      animation: d 3.2s ease-out forwards;
-    }
-
-    @keyframes d {
-      to { stroke-dashoffset: 0; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .ecg path {
-        animation: none;
-        stroke-dashoffset: 0;
-      }
-      html {
-        scroll-behavior: auto;
-      }
-    }
-
-    /* Boutons */
-    .btn {
-      display: inline-block;
-      padding: .6rem 1.1rem;
-      border: 1px solid var(--acc);
-      border-radius: 6px;
-      font: .8rem "Space Mono", monospace;
-      text-decoration: none;
-      color: var(--acc);
-      margin-right: .5rem;
-    }
-
-    .btn.f {
-      background: var(--acc);
-      color: var(--bg);
-    }
-
-    /* Composants Card */
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, .03);
-      padding: 1.4rem 1.5rem;
-      position: relative;
-      overflow: hidden;
-      transition: box-shadow .3s;
-    }
-
-    .card:hover {
-      box-shadow: 0 6px 20px rgba(0, 0, 0, .08);
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--acc), transparent);
-      opacity: .5;
-    }
-
-    .when {
-      font: .7rem "Space Mono", monospace;
-      color: var(--mute);
-      margin: 0 0 .6rem;
-    }
-
-    .card h3 {
-      font-size: .95rem;
-      font-weight: 500;
-      margin-bottom: .4rem;
-    }
-
-    .card p {
-      margin: 0;
-      font-size: .88rem;
-      color: var(--mute);
-      line-height: 1.6;
-    }
-
-    .card p + p {
-      margin-top: .5rem;
-    }
-
-    .stack {
-      display: grid;
-      gap: 1rem;
-    }
-
-    .lead {
-      font-size: .95rem;
-      line-height: 1.75;
-      margin: 0 0 1rem;
-    }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .4rem 1.2rem;
-      font: .72rem "Space Mono", monospace;
-      color: var(--mute);
-    }
-
-    .tag {
-      display: inline-block;
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      padding: .15rem .6rem;
-      font: .68rem "Space Mono", monospace;
-      color: var(--mute);
-      margin: .9rem .4rem 0 0;
-    }
-
-    /* Timeline */
-    .tl {
-      position: relative;
-      margin: 0;
-      padding: 0 0 0 1.5rem;
-      list-style: none;
-      border-left: 1px solid var(--line);
-    }
-
-    .tl li {
-      position: relative;
-      margin-bottom: 2rem;
-    }
-
-    .tl li::before {
-      content: "";
-      position: absolute;
-      left: calc(-1.5rem - 7px);
-      top: .2rem;
-      width: 13px;
-      height: 13px;
-      border-radius: 50%;
-      background: var(--bg);
-      border: 2px solid var(--line);
-    }
-
-    .tl li.n::before {
-      border-color: var(--acc);
-    }
-
-    .tl p {
-      margin: .3rem 0 0;
-      font-size: .88rem;
-      color: var(--mute);
-    }
-
-    .tl p.when {
-      margin: 0 0 .4rem;
-    }
-
-    .tl h3 {
-      font-size: .95rem;
-      font-weight: 500;
-    }
-
-    /* Tabs (Filtres projets) */
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .5rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .tabs button {
-      font: .72rem "Space Mono", monospace;
-      padding: .4rem .8rem;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: var(--card);
-      color: var(--ink);
-      cursor: pointer;
-    }
-
-    .tabs button[aria-pressed="true"] {
-      border-color: var(--acc);
-      background: var(--acc);
-      color: var(--bg);
-    }
-
-    .hide {
-      display: none !important;
-    }
-
-    /* Details / Accordions */
-    details.card {
-      padding: 0;
-    }
-
-    summary {
-      cursor: pointer;
-      list-style: none;
-      padding: 1.2rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::after {
-      content: "+";
-      font: 1.3rem "Space Mono", monospace;
-      color: var(--acc);
-      transition: transform .2s;
-    }
-
-    details[open] summary::after {
-      transform: rotate(45deg);
-    }
-
-    summary h3 {
-      margin: 0;
-    }
-
-    summary .when {
-      margin: 0 0 .3rem;
-    }
-
-    .in {
-      padding: 0 1.5rem 1.3rem;
-      font-size: .88rem;
-      color: var(--mute);
-    }
-
-    .in h4 {
-      font: .7rem "Space Mono", monospace;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--acc);
-      margin: 1rem 0 .3rem;
-    }
-
-    .in ul {
-      margin: 0;
-      padding-left: 1.1rem;
-    }
-
-    .in p {
-      margin: 0 0 .3rem;
-    }
-
-    /* Grilles de compétences & Langues */
-    .g2 {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      margin-bottom: 2rem;
-    }
-
-    .card h4 {
-      font: .7rem "Space Mono", monospace;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--mute);
-      margin-bottom: .8rem;
-    }
-
-    .chip {
-      display: inline-block;
-      border: 1px solid var(--line);
-      border-radius: 4px;
-      padding: .2rem .65rem;
-      font: .72rem "Space Mono", monospace;
-      margin: 0 .4rem .4rem 0;
-      color: var(--ink);
-    }
-
-    /* Section Contact */
-    .ct {
-      display: grid;
-      gap: .4rem;
-    }
-
-    .ct a, .ct span {
-      font: .82rem "Space Mono", monospace;
-      color: var(--ink);
-      text-decoration: none;
-    }
-
-    .ct a:first-child {
-      color: var(--acc);
-    }
-
-    footer {
-      font: .72rem "Space Mono", monospace;
-      color: var(--mute);
-      margin-top: 4rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 860px) {
-      aside {
-        position: sticky;
-        top: 0;
-        width: 100%;
-        padding: .6rem 1rem;
-        flex-direction: row;
-        align-items: center;
-        gap: .8rem;
-        background: color-mix(in srgb, var(--bg) 92%, transparent);
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid var(--line);
-      }
-      
-      aside h2, #dot, .side-foot span {
-        display: none;
-      }
-      
-      aside > div:first-child {
-        overflow-x: auto;
-        flex: 1;
-        scrollbar-width: none;
-      }
-      
-      #idx {
-        display: flex;
-        gap: 1.2rem;
-        border: 0;
-        padding: 0;
-      }
-      
-      #idx li {
-        margin: 0;
-        white-space: nowrap;
-      }
-      
-      #idx a.on {
-        color: var(--acc);
-      }
-      
-      main {
-        margin: 0;
-        padding: 1rem 1.2rem 4rem;
-      }
-      
-      section {
-        scroll-margin-top: 60px;
-        padding-top: 4rem;
-      }
-      
-      #intro {
-        padding-top: 2rem;
-      }
-    }
-  </style>
+  <!-- Lien vers votre fichier CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -630,8 +44,8 @@
 
       <section id="intro">
         <p class="kick">Yasmin Hadj-Said</p>
-        <h1>Ingénieure <b>Systèmes Microélectroniques</b> &amp; Management</h1>
-        <p class="sub">Étudiante à l'École des Mines de Saint-Étienne. FPGA, systèmes embarqués, robotique.</p>
+        <h1>Ingénieure <b>Systèmes Microélectroniques </b> &amp; Informatique </h1>
+        <p class="sub">Étudiante à l'École des Mines de Saint-Étienne & HEC Montréal. FPGA, systèmes embarqués, robotique & Administration des affaires.</p>
         <a class="btn f" href="#projets">voir les projets</a>
         <a class="btn" href="#contact">me contacter</a>
 
@@ -655,8 +69,8 @@
         <ol class="tl">
           <li class="n">
             <p class="when">2026 — 2027</p>
-            <h3>DESS en administration des affaires</h3>
-            <p>HEC Montréal · double compétence technique et managériale.</p>
+            <h3>HEC Montréal - DESS en administration des affaires</h3>
+            <p> Double compétence technique et managériale.</p>
           </li>
           <li class="n">
             <p class="when">2024 — 2027</p>
@@ -684,37 +98,94 @@
       <section id="experiences">
         <div class="h"><span>03</span><span>· Expériences</span></div>
         <div class="stack">
-          <article class="card">
-            <p class="when">Avril — juillet 2026</p>
-            <h3>Stage · Renault</h3>
-            <p>Technocentre de Guyancourt, After Sales Engineering — UET Diagnostic. Outil de gestion et de monitoring des activités de validation des outils Après-Vente.</p>
-          </article>
-          <article class="card">
-            <p class="when">2025</p>
-            <h3>Cheffe d'entreprise</h3>
-            <p>Création d'un cabinet conseil innovant appliquant l'intelligence artificielle à la mobilité internationale.</p>
-            <p><a href="https://visalog.dz/" target="_blank" rel="noopener">visalog.eu</a></p>
-          </article>
-          <article class="card">
-            <p class="when">Juillet 2025</p>
-            <h3>Stage · FACOFRI, Algérie</h3>
-            <p>Intégration d'un bras robotisé pour l'automatisation d'une presse plieuse ; programme Python simulant le pilotage, avec commande de pédale automatisée.</p>
-          </article>
-          <article class="card">
-            <p class="when">Janvier 2025</p>
-            <h3>Stage · EDF, siège (Paris)</h3>
-            <p>Direction des Services Informatiques et du Numérique, Direction Commerce, équipe CSC Supervision. Outil de gestion des demandes d'autorisation de l'équipe.</p>
-          </article>
-          <article class="card">
-            <p class="when">2019 — 2021</p>
-            <h3>Soutien scolaire</h3>
-            <p>Cours de mathématiques et de physique pour des lycéens.</p>
-          </article>
-          <article class="card">
-            <p class="when">2018</p>
-            <h3>Stage · EDF Brésil</h3>
-            <p>Immersion dans une entreprise française à l'étranger : finance, production, RH, juridique, environnement.</p>
-          </article>
+          <details class="card">
+            <summary>
+              <div>
+                <p class="when">Avril — juillet 2026</p>
+                <h3>Stage · Renault</h3>
+                <p class="summary-desc">Outil de gestion et de monitoring pour l'Après-Vente.</p>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Technocentre de Guyancourt, After Sales Engineering — UET Diagnostic. Outil de gestion et de monitoring des activités de validation des outils Après-Vente.</p>
+            </div>
+          </details>
+          
+          <details class="card">
+            <summary>
+              <div>
+                <p class="when">2025</p>
+                <h3>Création d'entreprise</h3>
+                <p class="summary-desc">Cabinet conseil innovant (IA & mobilité internationale).</p>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Création d'un cabinet conseil innovant dans l'intelligence artificielle appliquée à la mobilité internationale.</p>
+              <p><a href="https://visalog.dz/" target="_blank" rel="noopener">visalog.dz</a></p>
+            </div>
+          </details>
+          
+          <details class="card">
+            <summary>
+              <div>
+                <p class="when">Juillet 2025</p>
+                <h3>Stage chez FACOFRI en Algérie</h3>
+                <p class="summary-desc">Automatisation et pilotage d'une presse plieuse.</p>
+              </div>
+            </summary>
+            <div class="in">
+              <ul>
+                <li>Travaux d'intégration d'un bras robotisé pour l'automatisation d'une presse plieuse.</li>
+                <li>Développement d'un programme Python simulant le pilotage d'une presse plieuse, avec intégration d'un mécanisme automatisé de commande de pédale synchronisé à la simulation.</li>
+              </ul>
+            </div>
+          </details>
+          
+          <details class="card">
+            <summary>
+              <div>
+                <p class="when">Janvier 2025</p>
+                <h3>Stage chez EDF, Colombes, France</h3>
+                <p class="summary-desc">Outil de gestion des demandes d'autorisation.</p>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Direction Services Informatiques et Numériques, rattachée à la Direction Commerce – Équipe CSC Supervision.</p>
+              <ul>
+                <li>Création d'un outil de gestion des demandes d'autorisation à l'échelle de l'équipe, qui synthétise les méthodes de demande d'autorisation pour les arrivées et les départs, ainsi que leur suivi.</li>
+              </ul>
+            </div>
+          </details>
+          
+          <details class="card">
+            <summary>
+              <div>
+                <p class="when">2019 — 2021</p>
+                <h3>Soutien scolaire</h3>
+                <p class="summary-desc">Cours de mathématiques et de physique.</p>
+              </div>
+            </summary>
+            <div class="in">
+              <ul>
+                <li>Tutorat pour les élèves de lycée en mathématiques et en physique.</li>
+              </ul>
+            </div>
+          </details>
+          
+          <details class="card">
+            <summary>
+              <div>
+                <p class="when">2018</p>
+                <h3>Stage – Filiale brésilienne d'EDF</h3>
+                <p class="summary-desc">Immersion dans une entreprise française à l'étranger.</p>
+              </div>
+            </summary>
+            <div class="in">
+              <ul>
+                <li>Découverte des différents secteurs d'une entreprise : finance, production, RH, juridique, environnement...</li>
+              </ul>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -729,54 +200,117 @@
         </div>
 
         <div class="stack" id="pj">
-          <article class="card" data-t="elec">
-            <p class="when">2025</p>
-            <h3>Monitoring ECG sécurisé</h3>
-            <p>Acquisition temps réel sur FPGA Zynq-7020, gestion I2C/UART via FSM, chiffrement matériel ASCON, SystemVerilog sous Vivado et outil Python de déchiffrement et de visualisation.</p>
-            <span class="tag">FPGA</span><span class="tag">SystemVerilog</span><span class="tag">Python</span>
-          </article>
-          <article class="card" data-t="elec">
-            <p class="when">2025</p>
-            <h3>Chiffrement ASCON-128</h3>
-            <p>Implémentation de l'algorithme en SystemVerilog dans un projet de conception de systèmes numériques.</p>
-            <span class="tag">SystemVerilog</span><span class="tag">Cryptographie</span>
-          </article>
-          <article class="card" data-t="elec">
-            <p class="when">2025</p>
-            <h3>Projet IoT</h3>
-            <p>Solution de surveillance environnementale avec communication LoRa à faible portée.</p>
-            <span class="tag">IoT</span><span class="tag">LoRa</span>
-          </article>
-          <article class="card" data-t="elec">
-            <p class="when">2025</p>
-            <h3>Flappy Bird capacitif</h3>
-            <p>Prototypage d'un jeu Flappy Bird piloté par un capteur capacitif.</p>
-            <span class="tag">Capteurs</span><span class="tag">Prototypage</span>
-          </article>
-          <article class="card" data-t="robo">
-            <p class="when">2025</p>
-            <h3>Coupe de France de Robotique</h3>
-            <p>Coordination d'une équipe de 10 personnes ; électronique et modélisation 3D, dans le respect du cahier des charges et des délais.</p>
-            <span class="tag">Robotique</span><span class="tag">Équipe</span>
-          </article>
-          <article class="card" data-t="robo">
-            <p class="when">2024</p>
-            <h3>Victoire au Hackathon</h3>
-            <p>Compétition par équipe organisée par l'AREM avec STMicroelectronics, à Gardanne.</p>
-            <span class="tag">Hackathon</span><span class="tag">STMicroelectronics</span>
-          </article>
-          <article class="card" data-t="rech">
-            <p class="when">2023 — 2024</p>
-            <h3>Glisse d'un ski</h3>
-            <p>Étude en laboratoire et conception d'un simulateur de pente glacée.</p>
-            <span class="tag">Expérimentation</span>
-          </article>
-          <article class="card" data-t="rech">
-            <p class="when">2022 — 2023</p>
-            <h3>Éoliennes verticales Savonius</h3>
-            <p>Étude de ces éoliennes dans l'espace urbain contemporain, avec test d'un prototype conçu par l'équipe.</p>
-            <span class="tag">Énergie</span><span class="tag">Modélisation</span>
-          </article>
+          <details class="card" data-t="elec">
+            <summary>
+              <div>
+                <p class="when">2025</p>
+                <h3>Monitoring ECG sécurisé</h3>
+                <p class="summary-desc">Acquisition temps réel et chiffrement ASCON sur FPGA.</p>
+                <div style="margin-top:0.5rem;"><span class="tag">FPGA</span><span class="tag">SystemVerilog</span><span class="tag">Python</span></div>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Acquisition temps réel sur FPGA Zynq-7020, gestion I2C/UART via FSM, chiffrement matériel ASCON, SystemVerilog sous Vivado et outil Python de déchiffrement et de visualisation.</p>
+            </div>
+          </details>
+          
+          <details class="card" data-t="elec">
+            <summary>
+              <div>
+                <p class="when">2025</p>
+                <h3>Chiffrement ASCON-128</h3>
+                <p class="summary-desc">Implémentation de l'algorithme en SystemVerilog.</p>
+                <div style="margin-top:0.5rem;"><span class="tag">SystemVerilog</span><span class="tag">Cryptographie</span></div>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Implémentation de l'algorithme en SystemVerilog dans un projet de conception de systèmes numériques.</p>
+            </div>
+          </details>
+          
+          <details class="card" data-t="elec">
+            <summary>
+              <div>
+                <p class="when">2025</p>
+                <h3>Projet IoT</h3>
+                <p class="summary-desc">Surveillance environnementale via protocole LoRa.</p>
+                <div style="margin-top:0.5rem;"><span class="tag">IoT</span><span class="tag">LoRa</span></div>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Solution de surveillance environnementale avec communication LoRa à faible portée.</p>
+            </div>
+          </details>
+          
+          <details class="card" data-t="elec">
+            <summary>
+              <div>
+                <p class="when">2025</p>
+                <h3>Flappy Bird capacitif</h3>
+                <p class="summary-desc">Jeu classique piloté par un capteur tactile capacitif.</p>
+                <div style="margin-top:0.5rem;"><span class="tag">Capteurs</span><span class="tag">Prototypage</span></div>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Prototypage d'un jeu Flappy Bird piloté par un capteur capacitif.</p>
+            </div>
+          </details>
+          
+          <details class="card" data-t="robo">
+            <summary>
+              <div>
+                <p class="when">2025</p>
+                <h3>Coupe de France de Robotique</h3>
+                <p class="summary-desc">Coordination d'équipe, électronique et modélisation 3D.</p>
+                <div style="margin-top:0.5rem;"><span class="tag">Robotique</span><span class="tag">Équipe</span></div>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Coordination d'une équipe de 10 personnes ; électronique et modélisation 3D, dans le respect du cahier des charges et des délais.</p>
+            </div>
+          </details>
+          
+          <details class="card" data-t="robo">
+            <summary>
+              <div>
+                <p class="when">2024</p>
+                <h3>Victoire au Hackathon</h3>
+                <p class="summary-desc">Compétition de robotique avec STMicroelectronics.</p>
+                <div style="margin-top:0.5rem;"><span class="tag">Hackathon</span><span class="tag">STMicroelectronics</span></div>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Compétition par équipe organisée par l'AREM avec STMicroelectronics, à Gardanne.</p>
+            </div>
+          </details>
+          
+          <details class="card" data-t="rech">
+            <summary>
+              <div>
+                <p class="when">2024 — 2025</p>
+                <h3>Étude de la glisse à ski</h3>
+                <p class="summary-desc">Modélisation et conception d'un simulateur de pente glacée.</p>
+                <div style="margin-top:0.5rem;"><span class="tag">Expérimentation</span></div>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Étude théorique et expérimentale de la glisse d'un ski en laboratoire, avec conception et réalisation d'un dispositif de test simulant une pente glacée.</p>
+            </div>
+          </details>
+          
+          <details class="card" data-t="rech">
+            <summary>
+              <div>
+                <p class="when">2023 — 2024</p>
+                <h3>Étude des éoliennes Savonius</h3>
+                <p class="summary-desc">Analyse et test d'un prototype d'éolienne verticale.</p>
+                <div style="margin-top:0.5rem;"><span class="tag">Énergie</span><span class="tag">Modélisation</span></div>
+              </div>
+            </summary>
+            <div class="in">
+              <p>Étude théorique de l'écartement optimal entre les pales d'une éolienne verticale, suivie de tests sur une éolienne conçue et réalisée par nos soins dans l'urbanisme contemporain.</p>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -788,6 +322,7 @@
               <div>
                 <p class="when">2025 — 2026</p>
                 <h3>Présidente de l'AREM</h3>
+                <p class="summary-desc">Leadership technique et implication associative.</p>
               </div>
             </summary>
             <div class="in">
@@ -821,6 +356,7 @@
               <div>
                 <p class="when">2025</p>
                 <h3>Ingénieurs Solidaires en Action (ISA)</h3>
+                <p class="summary-desc">Gestion de projet pour une association d'accompagnement.</p>
               </div>
             </summary>
             <div class="in">
@@ -832,11 +368,12 @@
             <summary>
               <div>
                 <p class="when">2025 — 2026</p>
-                <h3>Capitaine · équipe féminine de volley-ball</h3>
+                <h3>Capitaine · équipe de volley-ball</h3>
+                <p class="summary-desc">Coordination d'équipe et planification.</p>
               </div>
             </summary>
             <div class="in">
-              <p>Coordination de l'équipe, cohésion de groupe, planification des créneaux et interface avec les équipes adverses de la ligue universitaire.</p>
+              <p>Coordination de l'équipe féminine, cohésion de groupe, planification des créneaux et interface avec les équipes adverses de la ligue universitaire.</p>
             </div>
           </details>
 
@@ -845,6 +382,7 @@
               <div>
                 <p class="when">2025 — 2026</p>
                 <h3>Bureau des Internationaux</h3>
+                <p class="summary-desc">Intégration des étudiants internationaux.</p>
               </div>
             </summary>
             <div class="in">
@@ -857,6 +395,7 @@
               <div>
                 <p class="when">2025 — 2026</p>
                 <h3>COMIF · T'ipause</h3>
+                <p class="summary-desc">Accueil et distribution à la cafétéria associative.</p>
               </div>
             </summary>
             <div class="in">
@@ -869,6 +408,7 @@
               <div>
                 <p class="when">2025</p>
                 <h3>Sensibilisation et science</h3>
+                <p class="summary-desc">Fête de la Science et recyclage plastique (PLA).</p>
               </div>
             </summary>
             <div class="in">
@@ -943,7 +483,6 @@
         <div class="h"><span>09</span><span>· Contact</span></div>
         <div class="card ct">
           <a href="mailto:yasmin.hadj-said@etu.emse.fr">yasmin.hadj-said@etu.emse.fr</a>
-       
           <span> Savigny-sur-Orge</span>
         </div>
         <footer>© Yasmin Hadj-Said</footer>
@@ -952,82 +491,7 @@
     </div>
   </main>
 
-  <script>
-    // Calcul de l'âge automatique
-    (function() {
-      var birthDate = new Date(2004, 4, 12); // Mois = 4 (Mai en index 0)
-      var now = new Date();
-      var age = now.getFullYear() - birthDate.getFullYear();
-      if (now < new Date(now.getFullYear(), 4, 12)) {
-        age--;
-      }
-      document.getElementById('age').textContent = age;
-    })();
-
-    // Basculement de thème (Clair / Sombre)
-    document.getElementById('th').onclick = function() {
-      var root = document.documentElement;
-      var isDark = root.dataset.theme === 'dark' || (!root.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches);
-      root.dataset.theme = isDark ? 'light' : 'dark';
-    };
-
-    // Gestion des filtres (onglets) de la section Projets
-    document.querySelectorAll('.tabs button').forEach(function(btn) {
-      btn.onclick = function() {
-        // Mise à jour de l'état actif des boutons
-        document.querySelectorAll('.tabs button').forEach(function(x) {
-          x.setAttribute('aria-pressed', x === btn);
-        });
-        
-        // Filtrage des cartes
-        document.querySelectorAll('#pj .card').forEach(function(card) {
-          var showAll = btn.dataset.f === 'all';
-          var matchFilter = card.dataset.t === btn.dataset.f;
-          card.classList.toggle('hide', !(showAll || matchFilter));
-        });
-      };
-    });
-
-    // Observer pour le défilement et la mise à jour du point de navigation (Sidebar)
-    var links = document.querySelectorAll('#idx a');
-    var dot = document.getElementById('dot');
-
-    function markActive(link) {
-      if (!link) return;
-      
-      links.forEach(function(x) {
-        x.classList.toggle('on', x === link);
-      });
-      
-      // Positionnement du point indicateur
-      dot.style.transform = 'translateY(' + (link.parentNode.offsetTop + link.offsetHeight / 2 - 4) + 'px)';
-      
-      // Défilement horizontal automatique du menu sur mobile
-      if (innerWidth <= 860) {
-        link.scrollIntoView({ block: 'nearest', inline: 'center' });
-      }
-    }
-
-    var observer = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          markActive(document.querySelector('#idx a[href="#' + entry.target.id + '"]'));
-        }
-      });
-    }, { rootMargin: '-35% 0px -60% 0px' });
-
-    // Initialiser l'observation pour toutes les sections ayant un ID
-    document.querySelectorAll('section[id]').forEach(function(section) {
-      observer.observe(section);
-    });
-
-    // Initialisation au chargement
-    markActive(links[0]);
-    
-    // Recalcul de la position en cas de redimensionnement de l'écran
-    addEventListener('resize', function() {
-      markActive(document.querySelector('#idx a.on') || links[0]);
-    });
-  </script>
+  <!-- Lien vers votre fichier JS -->
+  <script src="script.js"></script>
 </body>
 </html>
