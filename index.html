@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yasmin Hadj-Said · Ingénieure Systèmes Microélectroniques &amp; Management</title>
-  <meta name="description" content="Étudiante ingénieure à l'École des Mines de Saint-Étienne : FPGA, systèmes embarqués, robotique, management.">
-  
+  <title>Yasmin Hadj-Said · Ingénieure Systèmes Microélectroniques &amp; Informatique</title>
+  <meta name="description" content="Étudiante ingénieure à l’École des Mines de Saint-Étienne : FPGA, systèmes embarqués, robotique, management.">
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- Lien vers votre fichier CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +18,7 @@
     <div>
       <h2>Index</h2>
       <ul id="idx">
-        <span id="dot"></span>
+        <li id="dot" aria-hidden="true"></li>
         <li><a href="#intro" class="on">00 — intro</a></li>
         <li><a href="#profil">01 — profil</a></li>
         <li><a href="#formation">02 — formation</a></li>
@@ -36,6 +34,7 @@
     <div class="side-foot">
       <span>Savigny-sur-Orge, France</span>
       <button id="th" aria-label="Changer de thème">◐ thème</button>
+      <button id="lang" type="button" aria-label="Switch to English">EN</button>
     </div>
   </aside>
 
@@ -44,8 +43,8 @@
 
       <section id="intro">
         <p class="kick">Yasmin Hadj-Said</p>
-        <h1>Ingénieure <b>Systèmes Microélectroniques </b> &amp; Informatique </h1>
-        <p class="sub">Étudiante à l'École des Mines de Saint-Étienne & HEC Montréal. FPGA, systèmes embarqués, robotique & Administration des affaires.</p>
+        <h1>Ingénieure <b>Systèmes Microélectroniques</b> &amp; Informatique</h1>
+        <p class="sub">Étudiante à l’École des Mines de Saint-Étienne et à HEC Montréal. FPGA, systèmes embarqués, robotique et administration des affaires.</p>
         <a class="btn f" href="#projets">voir les projets</a>
         <a class="btn" href="#contact">me contacter</a>
 
@@ -56,7 +55,7 @@
 
       <section id="profil">
         <div class="h"><span>01</span><span>· Profil</span></div>
-        <p class="lead">Étudiante à l'École des Mines de Saint-Étienne dans le cursus Systèmes Microélectroniques et Informatique, je suis en train de compléter ma formation avec un DESS en administration des affaires à HEC Montréal afin d'acquérir une double compétence technique et managériale.</p>
+        <p class="lead">Étudiante à l’École des Mines de Saint-Étienne dans le cursus Systèmes Microélectroniques et Informatique, je suis en train de compléter ma formation avec un DESS en administration des affaires à HEC Montréal afin d’acquérir une double compétence technique et managériale.</p>
         <p class="meta">
           <span>Nationalité française</span>
           <span><span id="age">22</span> ans · née le 12 mai 2004 à Rio de Janeiro</span>
@@ -68,17 +67,17 @@
         <div class="h"><span>02</span><span>· Formation</span></div>
         <ol class="tl">
           <li class="n">
-            <p class="when">2026 — 2027</p>
-            <h3>HEC Montréal - DESS en administration des affaires</h3>
-            <p> Double compétence technique et managériale.</p>
+            <p class="when">2026 – 2027</p>
+            <h3>HEC Montréal</h3>
+            <p>DESS en administration des affaires : double compétence technique et managériale.</p>
           </li>
           <li class="n">
-            <p class="when">2024 — 2027</p>
+            <p class="when">2024 – 2027</p>
             <h3>École Nationale Supérieure des Mines de Saint-Étienne</h3>
             <p>Cursus ingénieur Systèmes Microélectroniques et Informatique. Formation de prévention des violences sexistes et sexuelles (VSS).</p>
           </li>
           <li>
-            <p class="when">2021 — 2024</p>
+            <p class="when">2021 – 2024</p>
             <h3>Lycée Saint-Louis, Paris</h3>
             <p>Classes préparatoires aux grandes écoles : MPSI, MP.</p>
           </li>
@@ -89,7 +88,7 @@
           </li>
           <li>
             <p class="when">2019</p>
-            <h3>DELE niveau B2</h3>
+            <h3>DELE, niveau B2</h3>
             <p>Diploma de Español como Lengua Extranjera.</p>
           </li>
         </ol>
@@ -99,90 +98,91 @@
         <div class="h"><span>03</span><span>· Expériences</span></div>
         <div class="stack">
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">Avril — juillet 2026</p>
-                <h3>Stage · Renault</h3>
-                <p class="summary-desc">Outil de gestion et de monitoring pour l'Après-Vente.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">Avril – juillet 2026</p>
+              <h3>Stage · Renault</h3>
+              <p class="summary-desc">Outil de gestion et de monitoring pour l’Après-Vente.</p>
+            </div></summary>
             <div class="in">
-              <p>Technocentre de Guyancourt, After Sales Engineering — UET Diagnostic. Outil de gestion et de monitoring des activités de validation des outils Après-Vente.</p>
+              <ul>
+                <li>Conception et développement de bout en bout de la Control Tower OV360 pour le suivi des validations des outils de diagnostic à l’échelle internationale.</li>
+                <li>Centralisation des activités France, Inde et Roumanie dans un seul espace de pilotage, avec suivi des dossiers et des étapes critiques.</li>
+                <li>Automatisation du reporting et du pilotage via SharePoint, Power Automate, BigQuery et Looker pour optimiser le suivi des KPI et du Right First Time.</li>
+              </ul>
             </div>
           </details>
-          
+
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">2025</p>
-                <h3>Création d'entreprise</h3>
-                <p class="summary-desc">Cabinet conseil innovant (IA & mobilité internationale).</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2025</p>
+              <h3>Création d’entreprise</h3>
+              <p class="summary-desc">Cabinet conseil innovant en IA et mobilité internationale.</p>
+            </div></summary>
             <div class="in">
-              <p>Création d'un cabinet conseil innovant dans l'intelligence artificielle appliquée à la mobilité internationale.</p>
+              <ul>
+                <li>Création d’un cabinet conseil axé sur l’intelligence artificielle appliquée à la mobilité internationale et aux services de conseil.</li>
+                <li>Développement d’une proposition de valeur claire autour de l’optimisation des process, de la transformation digitale et de la stratégie de croissance.</li>
+                <li>Mise en place des fondements de l’activité et des premiers cadrages commerciaux et opérationnels.</li>
+              </ul>
               <p><a href="https://visalog.dz/" target="_blank" rel="noopener">visalog.dz</a></p>
             </div>
           </details>
-          
+
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">Juillet 2025</p>
-                <h3>Stage chez FACOFRI en Algérie</h3>
-                <p class="summary-desc">Automatisation et pilotage d'une presse plieuse.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">Juillet 2025</p>
+              <h3>Stage · FACOFRI, Algérie</h3>
+              <p class="summary-desc">Automatisation et pilotage d’une presse plieuse.</p>
+            </div></summary>
             <div class="in">
               <ul>
-                <li>Travaux d'intégration d'un bras robotisé pour l'automatisation d'une presse plieuse.</li>
-                <li>Développement d'un programme Python simulant le pilotage d'une presse plieuse, avec intégration d'un mécanisme automatisé de commande de pédale synchronisé à la simulation.</li>
+                <li>Intégration d’un bras robotisé pour automatiser une presse plieuse et améliorer la précision du cycle de production.</li>
+                <li>Développement d’un logiciel Python simulant le pilotage d’une presse plieuse, avec commande automatisée de pédale synchronisée à la simulation.</li>
+                <li>Contribution au pilotage et à l’optimisation des opérations de production grâce à une meilleure maîtrise des flux et du temps de cycle.</li>
               </ul>
             </div>
           </details>
-          
+
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">Janvier 2025</p>
-                <h3>Stage chez EDF, Colombes, France</h3>
-                <p class="summary-desc">Outil de gestion des demandes d'autorisation.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">Janvier 2025</p>
+              <h3>Stage · EDF, Colombes</h3>
+              <p class="summary-desc">Outil de gestion des demandes d’autorisation.</p>
+            </div></summary>
             <div class="in">
-              <p>Direction Services Informatiques et Numériques, rattachée à la Direction Commerce – Équipe CSC Supervision.</p>
+              <p>Direction Services Informatiques et Numériques, rattachée à la Direction Commerce (équipe CSC Supervision).</p>
               <ul>
-                <li>Création d'un outil de gestion des demandes d'autorisation à l'échelle de l'équipe, qui synthétise les méthodes de demande d'autorisation pour les arrivées et les départs, ainsi que leur suivi.</li>
+                <li>Création d’un outil de gestion des demandes d’autorisation à l’échelle de l’équipe pour centraliser les procédures d’arrivée et de départ.</li>
+                <li>Structuration du suivi des demandes et simplification des échanges entre les acteurs pour réduire les frictions et gagner en visibilité.</li>
+                <li>Conception d’une solution pratique et conforme aux besoins opérationnels de l’équipe, avec un suivi clair des validations.</li>
               </ul>
             </div>
           </details>
-          
+
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">2019 — 2021</p>
-                <h3>Soutien scolaire</h3>
-                <p class="summary-desc">Cours de mathématiques et de physique.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2019 – 2021</p>
+              <h3>Soutien scolaire</h3>
+              <p class="summary-desc">Cours de mathématiques et de physique.</p>
+            </div></summary>
             <div class="in">
               <ul>
-                <li>Tutorat pour les élèves de lycée en mathématiques et en physique.</li>
+                <li>Tutorat d’élèves de lycée en mathématiques et en physique pour renforcer leur compréhension des notions fondamentales.</li>
+                <li>Accompagnement personnalisé dans la préparation aux contrôles et dans la progression sur le long terme.</li>
               </ul>
             </div>
           </details>
-          
+
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">2018</p>
-                <h3>Stage – Filiale brésilienne d'EDF</h3>
-                <p class="summary-desc">Immersion dans une entreprise française à l'étranger.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2018</p>
+              <h3>Stage · Filiale brésilienne d’EDF</h3>
+              <p class="summary-desc">Immersion dans une entreprise française à l’étranger.</p>
+            </div></summary>
             <div class="in">
               <ul>
-                <li>Découverte des différents secteurs d'une entreprise : finance, production, RH, juridique, environnement...</li>
+                <li>Découverte des différents secteurs d’une entreprise : finance, production, RH, juridique et environnement.</li>
+                <li>Immersion dans le fonctionnement d’une structure internationale et compréhension des enjeux de gestion d’une entreprise multiforme.</li>
               </ul>
             </div>
           </details>
@@ -191,7 +191,7 @@
 
       <section id="projets">
         <div class="h"><span>04</span><span>· Projets</span></div>
-        
+
         <div class="tabs" role="group" aria-label="Filtrer les projets">
           <button aria-pressed="true" data-f="all">tous</button>
           <button aria-pressed="false" data-f="elec">électronique &amp; fpga</button>
@@ -201,114 +201,109 @@
 
         <div class="stack" id="pj">
           <details class="card" data-t="elec">
-            <summary>
-              <div>
-                <p class="when">2025</p>
-                <h3>Monitoring ECG sécurisé</h3>
-                <p class="summary-desc">Acquisition temps réel et chiffrement ASCON sur FPGA.</p>
-                <div style="margin-top:0.5rem;"><span class="tag">FPGA</span><span class="tag">SystemVerilog</span><span class="tag">Python</span></div>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">Février – mars 2026</p>
+              <h3>Monitoring ECG sécurisé</h3>
+              <p class="summary-desc">Acquisition temps réel et chiffrement ASCON sur FPGA.</p>
+              <div class="tags"><span class="tag">FPGA</span><span class="tag">SystemVerilog</span><span class="tag">Python</span></div>
+            </div></summary>
             <div class="in">
-              <p>Acquisition temps réel sur FPGA Zynq-7020, gestion I2C/UART via FSM, chiffrement matériel ASCON, SystemVerilog sous Vivado et outil Python de déchiffrement et de visualisation.</p>
+              <p>Ce projet de monitoring ECG sécurisé repose sur l’acquisition en temps réel et le chiffrement matériel de données médicales via une carte FPGA Zynq-7020.</p>
+              <p>Développé en SystemVerilog sous Vivado dans le cadre de mon cursus à l’École des Mines de Saint-Étienne, le système intègre une gestion précise des communications I2C et UART par machine d’états (FSM) cadencée à 50&nbsp;MHz.</p>
+              <p>L’architecture s’articule autour d’un cœur de chiffrement matériel ASCON interagissant avec une RAM double port pour sécuriser les trames ECG à la volée.</p>
+              <p>En aval, la chaîne est complétée par un outil logiciel développé en Python qui comprend un émulateur matériel pour les tests, assure le déchiffrement des données et propose une interface graphique de monitoring en direct, capable d’analyser l’onde ECG, de détecter le complexe PQRST et d’afficher le rythme cardiaque en temps réel.</p>
             </div>
           </details>
-          
+
           <details class="card" data-t="elec">
-            <summary>
-              <div>
-                <p class="when">2025</p>
-                <h3>Chiffrement ASCON-128</h3>
-                <p class="summary-desc">Implémentation de l'algorithme en SystemVerilog.</p>
-                <div style="margin-top:0.5rem;"><span class="tag">SystemVerilog</span><span class="tag">Cryptographie</span></div>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">Février – mai 2025</p>
+              <h3>Chiffrement ASCON-128</h3>
+              <p class="summary-desc">Implémentation matérielle de l’algorithme de chiffrement léger ASCON-AEAD128.</p>
+              <div class="tags"><span class="tag">SystemVerilog</span><span class="tag">Cryptographie</span></div>
+            </div></summary>
             <div class="in">
-              <p>Implémentation de l'algorithme en SystemVerilog dans un projet de conception de systèmes numériques.</p>
+              <p>Conception et développement de bout en bout d’un circuit numérique en SystemVerilog pour garantir la confidentialité et l’authenticité des échanges de données.</p>
+              <p>Modélisation des différentes couches de permutation (addition de constantes, substitution par S-box, diffusion) et création d’une machine d’états pour piloter les quatre phases clés du processus.</p>
+              <p>Intégration de l’architecture globale et validation complète du système via des outils de simulation, pour assurer la fiabilité du circuit et le débogage des signaux.</p>
             </div>
           </details>
-          
+
           <details class="card" data-t="elec">
-            <summary>
-              <div>
-                <p class="when">2025</p>
-                <h3>Projet IoT</h3>
-                <p class="summary-desc">Surveillance environnementale via protocole LoRa.</p>
-                <div style="margin-top:0.5rem;"><span class="tag">IoT</span><span class="tag">LoRa</span></div>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">Novembre – décembre 2025</p>
+              <h3>Projet IoT</h3>
+              <p class="summary-desc">Système connecté de monitoring environnemental et de mesure de la qualité de l’air.</p>
+              <div class="tags"><span class="tag">IoT</span><span class="tag">LoRaWAN</span></div>
+            </div></summary>
             <div class="in">
-              <p>Solution de surveillance environnementale avec communication LoRa à faible portée.</p>
+              <p>Conception et développement de bout en bout d’un dispositif d’alerte IoT pour la prévention des risques, dédié au monitoring environnemental et à la mesure de la qualité de l’air.</p>
+              <p>Intégration matérielle de capteurs avec indicateurs LED et transmission des données sans fil via le réseau The Things Network (LoRaWAN).</p>
+              <p>Création de dashboards de supervision pour centraliser l’historique des mesures d’IAQ (Indoor Air Quality) et visualiser les données de qualité de l’air en temps réel.</p>
             </div>
           </details>
-          
+
           <details class="card" data-t="elec">
-            <summary>
-              <div>
-                <p class="when">2025</p>
-                <h3>Flappy Bird capacitif</h3>
-                <p class="summary-desc">Jeu classique piloté par un capteur tactile capacitif.</p>
-                <div style="margin-top:0.5rem;"><span class="tag">Capteurs</span><span class="tag">Prototypage</span></div>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">Avril – juin 2026</p>
+              <h3>Borne d’arcade Flappy Bird à contrôle capacitif</h3>
+              <p class="summary-desc">Borne portable et autonome avec une interface de jeu sans contact.</p>
+              <div class="tags"><span class="tag">Capteurs</span><span class="tag">STM32</span><span class="tag">C++</span><span class="tag">PCB</span></div>
+            </div></summary>
             <div class="in">
-              <p>Prototypage d'un jeu Flappy Bird piloté par un capteur capacitif.</p>
+              <p>Conception d’une borne d’arcade portable et autonome revisitant Flappy Bird avec une interface sans contact. Le joueur contrôle l’altitude de l’oiseau sur un écran OLED en approchant sa main d’une plaque en cuivre capacitive&nbsp;: plus la main est proche, plus le personnage monte.</p>
+              <p>Développement de l’architecture complète, de la conception du capteur à l’intégration finale. Réalisation du routage d’un circuit conditionneur sur PCB pour traiter le signal, puis programmation de l’acquisition et du filtrage des données sur un microcontrôleur STM32 NUCLEO-F301K8 et de la logique du jeu en C++ sur une carte NUCLEO-L432KC.</p>
+              <p>Intégration de l’électronique dans un boîtier compact inspiré du Minitel et modélisé en 3D, mobilisant des compétences en électronique analogique, en programmation embarquée et en intégration de systèmes.</p>
             </div>
           </details>
-          
+
           <details class="card" data-t="robo">
-            <summary>
-              <div>
-                <p class="when">2025</p>
-                <h3>Coupe de France de Robotique</h3>
-                <p class="summary-desc">Coordination d'équipe, électronique et modélisation 3D.</p>
-                <div style="margin-top:0.5rem;"><span class="tag">Robotique</span><span class="tag">Équipe</span></div>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">Septembre 2024 – mai 2025</p>
+              <h3>Coupe de France de Robotique</h3>
+              <p class="summary-desc">Conception d’actionneurs et amélioration mécanique des robots de compétition.</p>
+              <div class="tags"><span class="tag">Robotique</span><span class="tag">Équipe</span></div>
+            </div></summary>
             <div class="in">
-              <p>Coordination d'une équipe de 10 personnes ; électronique et modélisation 3D, dans le respect du cahier des charges et des délais.</p>
+              <p>Conception du système de lancement des PAMIS (petits actionneurs mobiles indépendants), déclenché par un interrupteur magnétique.</p>
+              <p>Développement d’un actionneur répondant à la contrainte de la compétition («&nbsp;faire la fête&nbsp;»).</p>
+              <p>Mise à jour de la modélisation 3D des robots pour résoudre les problèmes de fermeture du châssis et simplifier sa conception grâce à un système coulissant.</p>
             </div>
           </details>
-          
+
           <details class="card" data-t="robo">
-            <summary>
-              <div>
-                <p class="when">2024</p>
-                <h3>Victoire au Hackathon</h3>
-                <p class="summary-desc">Compétition de robotique avec STMicroelectronics.</p>
-                <div style="margin-top:0.5rem;"><span class="tag">Hackathon</span><span class="tag">STMicroelectronics</span></div>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2024</p>
+              <h3>Victoire au Hackathon</h3>
+              <p class="summary-desc">Compétition de robotique avec STMicroelectronics.</p>
+              <div class="tags"><span class="tag">Hackathon</span><span class="tag">STMicroelectronics</span></div>
+            </div></summary>
             <div class="in">
-              <p>Compétition par équipe organisée par l'AREM avec STMicroelectronics, à Gardanne.</p>
+              <p>Compétition par équipe organisée par l’AREM avec STMicroelectronics, à Gardanne.</p>
             </div>
           </details>
-          
+
           <details class="card" data-t="rech">
-            <summary>
-              <div>
-                <p class="when">2024 — 2025</p>
-                <h3>Étude de la glisse à ski</h3>
-                <p class="summary-desc">Modélisation et conception d'un simulateur de pente glacée.</p>
-                <div style="margin-top:0.5rem;"><span class="tag">Expérimentation</span></div>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2024 – 2025</p>
+              <h3>Étude de la glisse à ski</h3>
+              <p class="summary-desc">Modélisation et conception d’un simulateur de pente glacée.</p>
+              <div class="tags"><span class="tag">Expérimentation</span></div>
+            </div></summary>
             <div class="in">
-              <p>Étude théorique et expérimentale de la glisse d'un ski en laboratoire, avec conception et réalisation d'un dispositif de test simulant une pente glacée.</p>
+              <p>Étude théorique et expérimentale de la glisse d’un ski en laboratoire, avec conception et réalisation d’un dispositif de test simulant une pente glacée.</p>
             </div>
           </details>
-          
+
           <details class="card" data-t="rech">
-            <summary>
-              <div>
-                <p class="when">2023 — 2024</p>
-                <h3>Étude des éoliennes Savonius</h3>
-                <p class="summary-desc">Analyse et test d'un prototype d'éolienne verticale.</p>
-                <div style="margin-top:0.5rem;"><span class="tag">Énergie</span><span class="tag">Modélisation</span></div>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2023 – 2024</p>
+              <h3>Étude des éoliennes Savonius</h3>
+              <p class="summary-desc">Analyse et test d’un prototype d’éolienne verticale.</p>
+              <div class="tags"><span class="tag">Énergie</span><span class="tag">Modélisation</span></div>
+            </div></summary>
             <div class="in">
-              <p>Étude théorique de l'écartement optimal entre les pales d'une éolienne verticale, suivie de tests sur une éolienne conçue et réalisée par nos soins dans l'urbanisme contemporain.</p>
+              <p>Étude théorique de l’écartement optimal entre les pales d’une éolienne verticale dans le contexte de l’urbanisme contemporain, suivie de tests sur une éolienne conçue et réalisée par nos soins.</p>
             </div>
           </details>
         </div>
@@ -318,31 +313,29 @@
         <div class="h"><span>05</span><span>· Engagement</span></div>
         <div class="stack">
           <details class="card" open>
-            <summary>
-              <div>
-                <p class="when">2025 — 2026</p>
-                <h3>Présidente de l'AREM</h3>
-                <p class="summary-desc">Leadership technique et implication associative.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2025 – 2026</p>
+              <h3>Présidente de l’AREM</h3>
+              <p class="summary-desc">Leadership technique et implication associative.</p>
+            </div></summary>
             <div class="in">
-              <p>Association de Robotique et Électronique des Mines : leadership technique en robotique et implication dans la vie étudiante.</p>
+              <p>Association de Robotique et Électronique des Mines&nbsp;: leadership technique en robotique et implication dans la vie étudiante.</p>
               <h4>Management et gouvernance</h4>
               <ul>
-                <li>Équipe de 14 personnes, tenue des conseils d'administration.</li>
+                <li>Équipe de 14 personnes, tenue des conseils d’administration.</li>
                 <li>Nouvel organigramme et entretiens de recrutement du mandat EI25 (environ 10 heures).</li>
               </ul>
               <h4>Partenariats</h4>
               <ul>
-                <li>Représentante légale et porte-parole auprès de l'école et des partenaires.</li>
-                <li>Subvention FDVA de 2 300 € obtenue (dossier Mairie de Gardanne).</li>
+                <li>Représentante légale et porte-parole auprès de l’école et des partenaires.</li>
+                <li>Subvention FDVA de 2&nbsp;300&nbsp;€ obtenue (dossier Mairie de Gardanne).</li>
                 <li>Négociation avec des industriels majeurs, dont Alstom et STMicroelectronics.</li>
               </ul>
               <h4>Événements</h4>
               <ul>
                 <li>Coupe de France de Robotique 2025, préparation de 2026, Hackathon de programmation de robots.</li>
-                <li>Paquathon (50 participants) et Défi Actionneurs, initiation à la robotique pour les première année.</li>
-                <li>Intégration : soirée AREM, comité d'intégration, « Famille Verte ».</li>
+                <li>Paquathon (50 participants) et Défi Actionneurs, initiation à la robotique pour les étudiants de première année.</li>
+                <li>Intégration&nbsp;: soirée AREM, comité d’intégration, «&nbsp;Famille Verte&nbsp;».</li>
               </ul>
               <h4>Communication</h4>
               <ul>
@@ -352,69 +345,59 @@
           </details>
 
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">2025</p>
-                <h3>Ingénieurs Solidaires en Action (ISA)</h3>
-                <p class="summary-desc">Gestion de projet pour une association d'accompagnement.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2025</p>
+              <h3>Ingénieurs Solidaires en Action (ISA)</h3>
+              <p class="summary-desc">Gestion de projet pour une association d’accompagnement.</p>
+            </div></summary>
             <div class="in">
-              <p>Gestion de projet pour l'Association Accompagnement Initiative (Gardanne) : journée bien-être pour des personnes à faibles revenus, avec contacts professionnels et entreprises donatrices, logistique, autofinancement et coordination des bénévoles.</p>
+              <p>Gestion de projet pour l’Association Accompagnement Initiative (Gardanne)&nbsp;: journée bien-être pour des personnes à faibles revenus, avec contacts professionnels et entreprises donatrices, logistique, autofinancement et coordination des bénévoles.</p>
             </div>
           </details>
 
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">2025 — 2026</p>
-                <h3>Capitaine · équipe de volley-ball</h3>
-                <p class="summary-desc">Coordination d'équipe et planification.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2025 – 2026</p>
+              <h3>Capitaine · équipe féminine de volley-ball</h3>
+              <p class="summary-desc">Coordination d’équipe et planification.</p>
+            </div></summary>
             <div class="in">
-              <p>Coordination de l'équipe féminine, cohésion de groupe, planification des créneaux et interface avec les équipes adverses de la ligue universitaire.</p>
+              <p>Coordination de l’équipe, cohésion de groupe, planification des créneaux et interface avec les équipes adverses de la ligue universitaire.</p>
             </div>
           </details>
 
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">2025 — 2026</p>
-                <h3>Bureau des Internationaux</h3>
-                <p class="summary-desc">Intégration des étudiants internationaux.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2025 – 2026</p>
+              <h3>Bureau des Internationaux</h3>
+              <p class="summary-desc">Intégration des étudiants internationaux.</p>
+            </div></summary>
             <div class="in">
               <p>Accueil et intégration des étudiants internationaux, événements de promotion des cultures (repas internationaux).</p>
             </div>
           </details>
 
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">2025 — 2026</p>
-                <h3>COMIF · T'ipause</h3>
-                <p class="summary-desc">Accueil et distribution à la cafétéria associative.</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2025 – 2026</p>
+              <h3>COMIF · T’ipause</h3>
+              <p class="summary-desc">Accueil et distribution à la cafétéria associative.</p>
+            </div></summary>
             <div class="in">
               <p>Service et accueil à la cafétéria associative, distribution de repas aux étudiants du campus (rythme bimensuel).</p>
             </div>
           </details>
 
           <details class="card">
-            <summary>
-              <div>
-                <p class="when">2025</p>
-                <h3>Sensibilisation et science</h3>
-                <p class="summary-desc">Fête de la Science et recyclage plastique (PLA).</p>
-              </div>
-            </summary>
+            <summary><div>
+              <p class="when">2025</p>
+              <h3>Sensibilisation et science</h3>
+              <p class="summary-desc">Fête de la Science et recyclage du plastique (PLA).</p>
+            </div></summary>
             <div class="in">
               <ul>
-                <li>Broyage Extrême : sensibilisation au recyclage du PLA lors de la journée ODD.</li>
-                <li>Fête de la Science : organisation sur plusieurs mois (avril à octobre), gestion des stands.</li>
+                <li>Broyage Extrême&nbsp;: sensibilisation au recyclage du PLA lors de la journée ODD.</li>
+                <li>Fête de la Science&nbsp;: organisation sur plusieurs mois (d’avril à octobre), gestion des stands.</li>
               </ul>
             </div>
           </details>
@@ -434,7 +417,7 @@
           </div>
           <div class="card">
             <h4>Conception et modélisation</h4>
-            <span class="chip">Inventor</span><span class="chip">KiCad</span><span class="chip">Comsol</span><span class="chip">Matlab</span>
+            <span class="chip">Inventor</span><span class="chip">KiCad</span><span class="chip">COMSOL</span><span class="chip">MATLAB</span>
           </div>
           <div class="card">
             <h4>Autres outils</h4>
@@ -447,25 +430,25 @@
         <div class="h"><span>07</span><span>· Langues</span></div>
         <div class="g2">
           <div class="card">
-            <h4>Bilingue</h4>
-            <span class="chip">Français (Maternelle)</span><span class="chip">Portugais (Maternelle)</span>
+            <h4>Langues maternelles</h4>
+            <span class="chip">Français</span><span class="chip">Portugais</span>
           </div>
           <div class="card">
-            <h4>Opérationnel (C1 / B2)</h4>
-            <span class="chip">Anglais (C1)</span><span class="chip">Espagnol (B2 DELE)</span>
+            <h4>Niveau avancé</h4>
+            <span class="chip">Anglais (C1)</span><span class="chip">Espagnol (B2, DELE)</span>
           </div>
           <div class="card">
-            <h4>Intermédiaire</h4>
+            <h4>Niveau élémentaire</h4>
             <span class="chip">Arabe (A2)</span>
           </div>
         </div>
       </section>
 
       <section id="interets">
-        <div class="h"><span>08</span><span>· Centres d'intérêt</span></div>
+        <div class="h"><span>08</span><span>· Centres d’intérêt</span></div>
         <div class="g2">
           <div class="card">
-            <h4>Sports & Loisirs</h4>
+            <h4>Sport et musique</h4>
             <span class="chip">Volley-ball</span><span class="chip">Guitare</span>
           </div>
           <div class="card">
@@ -474,7 +457,7 @@
           </div>
           <div class="card">
             <h4>Voyages</h4>
-            <span class="chip">Europe</span><span class="chip">Afrique</span><span class="chip">Amérique du Sud</span>
+            <span class="chip">Europe</span><span class="chip">Afrique</span><span class="chip">Amérique du Nord</span><span class="chip">Amérique du Sud</span>
           </div>
         </div>
       </section>
@@ -483,7 +466,7 @@
         <div class="h"><span>09</span><span>· Contact</span></div>
         <div class="card ct">
           <a href="mailto:yasmin.hadj-said@etu.emse.fr">yasmin.hadj-said@etu.emse.fr</a>
-          <span> Savigny-sur-Orge</span>
+          <span>Savigny-sur-Orge, France</span>
         </div>
         <footer>© Yasmin Hadj-Said</footer>
       </section>
@@ -491,7 +474,6 @@
     </div>
   </main>
 
-  <!-- Lien vers votre fichier JS -->
   <script src="script.js"></script>
 </body>
 </html>
