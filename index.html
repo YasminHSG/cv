@@ -9,45 +9,35 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Raleway:wght@500;700&family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <aside>
-    <div>
-      <h2>Index</h2>
-      <ul id="idx">
-        <li id="dot" aria-hidden="true"></li>
-        <li><a href="#intro" class="on">00 — intro</a></li>
-        <li><a href="#profil">01 — profil</a></li>
-        <li><a href="#formation">02 — formation</a></li>
-        <li><a href="#experiences">03 — expériences</a></li>
-        <li><a href="#projets">04 — projets</a></li>
-        <li><a href="#engagement">05 — engagement</a></li>
-        <li><a href="#competences">06 — compétences</a></li>
-        <li><a href="#langues">07 — langues</a></li>
-        <li><a href="#interets">08 — intérêts</a></li>
-        <li><a href="#contact">09 — contact</a></li>
-      </ul>
-    </div>
-    <div class="side-foot">
-      <span>Savigny-sur-Orge, France</span>
-      <button id="th" aria-label="Changer de thème">◐ thème</button>
-      <button id="lang" type="button" aria-label="Switch to English">EN</button>
-    </div>
-  </aside>
+  <header class="top"><div class="in2">
+    <a class="brand" href="#intro">Y<b>.</b>HS</a>
+    <nav>
+      <a href="#profil">Profil</a><a href="#formation">Formation</a>
+      <a href="#experiences">Expériences</a><a href="#projets">Projets</a>
+      <a href="#engagement">Engagement</a><a href="#competences">Compétences</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="tools"><button id="th" aria-label="Changer de thème">◐ thème</button><button id="lang" type="button" aria-label="Switch to English">EN</button></div>
+  </div></header>
 
   <main>
     <div class="col">
 
       <section id="intro">
-        <p class="kick">Yasmin Hadj-Said</p>
-        <h1>Ingénieure <b>Systèmes Microélectroniques</b> &amp; Informatique</h1>
-        <p class="sub">Étudiante à l’École des Mines de Saint-Étienne et à HEC Montréal. FPGA, systèmes embarqués, robotique et administration des affaires.</p>
-        <a class="btn f" href="#projets">voir les projets</a>
-        <a class="btn" href="#contact">me contacter</a>
-
+        <div>
+          <p class="kick">Salut, je suis Yasmin Hadj-Said</p>
+          <h1>Ingénieure <b>Systèmes Microélectroniques</b> &amp; Informatique</h1>
+          <p class="rot" id="rot"></p>
+          <p class="sub">Étudiante à l’École des Mines de Saint-Étienne et à HEC Montréal. FPGA, systèmes embarqués, robotique et administration des affaires.</p>
+          <a class="btn f" href="#projets">voir les projets</a>
+          <a class="btn" href="#contact">me contacter</a>
+        </div>
+        <div class="photo"><img src="photo.jpg" alt="Yasmin Hadj-Said" onerror="this.remove()">YH</div>
         <svg class="ecg" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0 50 Q 75 10, 150 50 T 300 50 T 450 50 T 600 50 T 750 50 T 900 50 T 1050 50 T 1200 50"/>
         </svg>
@@ -96,7 +86,7 @@
 
       <section id="experiences">
         <div class="h"><span>03</span><span>· Expériences</span></div>
-        <div class="stack">
+        <div class="stack tlx">
           <details class="card">
             <summary><div>
               <p class="when">Avril – juillet 2026</p>
