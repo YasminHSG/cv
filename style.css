@@ -66,7 +66,7 @@ details[open] summary:after{content:"–"}
 /* timeline */
 .tl{list-style:none;padding:0 0 0 28px;border-left:1px solid var(--line);display:grid;gap:28px}
 .tl li{position:relative}
-.tl li:before{content:"";position:absolute;left:-35px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--ac)}
+.tl li:before{content:"";position:absolute;left:-35px;top:29.5px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--ac)}
 .tl li.n:before{background:var(--ac)}
 .tl h3{font-size:19px}.tl p:last-child{color:var(--mut);font-size:14.5px}
 /* tabs */
@@ -100,9 +100,12 @@ h1 b{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-c
 .ecg path{stroke:var(--ac)}
 a{color:var(--ac)}
 
-/* bouton thème (version claire) */
-[data-theme=light] #th,[data-theme=light] #lang{background:var(--bg2);color:var(--tx);border:1px solid var(--line);border-radius:30px;padding:5px 16px;font:500 12px var(--fh);letter-spacing:.06em;text-transform:uppercase;transition:.2s}
-[data-theme=light] #th:hover,[data-theme=light] #lang:hover{border-color:var(--ac2);color:var(--ac2);box-shadow:0 2px 10px var(--glow)}
+/* boutons thème et langue (identiques en clair et en sombre) */
+#th,.langs button{background:var(--bg2);color:var(--tx);border:1px solid var(--line);border-radius:30px;padding:5px 16px;font:500 12px var(--fh);letter-spacing:.06em;text-transform:uppercase;transition:.2s}
+#th:hover,.langs button:hover{border-color:var(--ac2);color:var(--ac2);box-shadow:0 2px 10px var(--glow)}
+.langs{display:flex;gap:4px}
+.langs button{padding:5px 11px;font-weight:600}
+.langs button[aria-pressed=true]{background:linear-gradient(90deg,var(--ac),var(--ac2));border-color:transparent;color:#fff}
 
 /* ligne temporelle des expériences */
 .tlx{position:relative;gap:40px;padding:10px 0}
@@ -110,8 +113,8 @@ a{color:var(--ac)}
 .tlx>.card{width:calc(50% - 44px)}
 .tlx>.card:nth-child(odd){justify-self:start}
 .tlx>.card:nth-child(even){justify-self:end}
-.tlx>.card:before{top:22px;bottom:auto;width:18px;height:18px;border:3px solid var(--ac);border-radius:50%;background:var(--bg);opacity:1;box-shadow:0 0 0 5px var(--glow);transition:.25s;z-index:1}
-.tlx>.card:after{top:30px;bottom:auto;width:44px;height:2px;border:0;background:var(--ac2);opacity:.6}
+.tlx>.card:before{top:48px;bottom:auto;width:18px;height:18px;border:3px solid var(--ac);border-radius:50%;background:var(--bg);opacity:1;box-shadow:0 0 0 5px var(--glow);transition:.25s;z-index:1}
+.tlx>.card:after{top:56px;bottom:auto;width:44px;height:2px;border:0;background:var(--ac2);opacity:.6}
 .tlx>.card:nth-child(odd):before{right:-53px;left:auto}
 .tlx>.card:nth-child(odd):after{right:-44px;left:auto}
 .tlx>.card:nth-child(even):before{left:-53px;right:auto}
@@ -127,4 +130,32 @@ a{color:var(--ac)}
 .tlx>.card:nth-child(n):after{left:-26px;right:auto;width:26px}
 }
 
-.tools{display:flex;gap:8px;align-items:center}#lang{padding:5px 14px;font-size:12px;font-weight:600}
+.tools{display:flex;gap:8px;align-items:center}
+
+/* logos : vignette à gauche, à côté des dates et titres */
+.logo{flex:none;display:grid;place-items:center;width:104px;height:72px;padding:9px 12px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 4px 14px var(--glow)}
+.logo.fill{padding:0;object-fit:cover;border:0}
+.logo.ph{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;border:0;font:700 17px var(--fh);letter-spacing:.06em}
+.tl li{display:grid;grid-template-columns:104px 1fr;column-gap:18px;align-items:start}
+.tl li>*{grid-column:2}
+.tl li>.logo{grid-column:1;grid-row:1/span 3}
+.tlx summary{display:flex;align-items:flex-start;gap:16px}
+.tlx summary>div{flex:1;min-width:0}
+.tlx summary:after{float:none;margin:0 0 0 auto}
+@media(max-width:500px){
+.logo{width:72px;height:54px;padding:6px 8px;border-radius:10px}
+.tl li{grid-template-columns:72px 1fr;column-gap:12px}
+.tlx summary{gap:12px}
+.tl li:before{top:20.5px}
+.tlx>.card:before{top:39px}
+.tlx>.card:after{top:47px}
+}
+/* section engagement : logos à côté des titres */
+#engagement .lead{margin-bottom:36px}
+#engagement summary{display:flex;align-items:flex-start;gap:16px}
+#engagement summary>div{flex:1;min-width:0}
+#engagement summary:after{float:none;margin:0 0 0 auto}
+@media(max-width:500px){#engagement summary{gap:12px}}
+
+/* photo : l’image recouvre les initiales (qui restent en secours si photo.jpg est absente) */
+.photo>*{grid-area:1/1}

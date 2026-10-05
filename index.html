@@ -22,7 +22,7 @@
       <a href="#engagement">Engagement</a><a href="#competences">Compétences</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="tools"><button id="th" aria-label="Changer de thème">◐ thème</button><button id="lang" type="button" aria-label="Switch to English">EN</button></div>
+    <div class="tools"><button id="th" aria-label="Changer de thème">◐ thème</button><div class="langs" id="langs" role="group" aria-label="Langue / Language / Idioma"><button type="button" data-l="fr" aria-pressed="true" aria-label="Français">FR</button><button type="button" data-l="en" aria-pressed="false" aria-label="English">EN</button><button type="button" data-l="pt" aria-pressed="false" aria-label="Português (Brasil)">PT</button></div></div>
   </div></header>
 
   <main>
@@ -31,13 +31,13 @@
       <section id="intro">
         <div>
           <p class="kick">Salut, je suis Yasmin Hadj-Said</p>
-          <h1>Ingénieure <b>Systèmes Microélectroniques</b> &amp; Informatique</h1>
+          <h1>Ingénieure <b>Systèmes Microélectroniques <span>&amp; Informatique</span></b></h1>
           <p class="rot" id="rot"></p>
           <p class="sub">Étudiante à l’École des Mines de Saint-Étienne et à HEC Montréal. FPGA, systèmes embarqués, robotique et administration des affaires.</p>
           <a class="btn f" href="#projets">voir les projets</a>
           <a class="btn" href="#contact">me contacter</a>
         </div>
-        <div class="photo"><img src="photo.jpg" alt="Yasmin Hadj-Said" onerror="this.remove()">YH</div>
+        <div class="photo"><span>YH</span><img src="photo.jpg" alt="Yasmin Hadj-Said" onerror="this.remove()"></div>
         <svg class="ecg" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true">
           <path d="M0 50 Q 75 10, 150 50 T 300 50 T 450 50 T 600 50 T 750 50 T 900 50 T 1050 50 T 1200 50"/>
         </svg>
@@ -57,26 +57,31 @@
         <div class="h"><span>02</span><span>· Formation</span></div>
         <ol class="tl">
           <li class="n">
+            <img class="logo" src="img/logo-hec.png" alt="Logo HEC Montréal" loading="lazy">
             <p class="when">2026 – 2027</p>
             <h3>HEC Montréal</h3>
             <p>DESS en administration des affaires : double compétence technique et managériale.</p>
           </li>
           <li class="n">
+            <img class="logo" src="img/logo-mines.png" alt="Logo Mines Saint-Étienne" loading="lazy">
             <p class="when">2024 – 2027</p>
             <h3>École Nationale Supérieure des Mines de Saint-Étienne</h3>
             <p>Cursus ingénieur Systèmes Microélectroniques et Informatique. Formation de prévention des violences sexistes et sexuelles (VSS).</p>
           </li>
           <li>
+            <img class="logo" src="img/logo-saint-louis.png" alt="Blason du Lycée Saint-Louis" loading="lazy">
             <p class="when">2021 – 2024</p>
             <h3>Lycée Saint-Louis, Paris</h3>
             <p>Classes préparatoires aux grandes écoles : MPSI, MP.</p>
           </li>
           <li>
+            <img class="logo" src="img/logo-moliere.png" alt="Logo Lycée Molière Rio de Janeiro" loading="lazy">
             <p class="when">2020</p>
             <h3>Lycée Molière, Rio de Janeiro</h3>
             <p>Baccalauréat scientifique, mention Très Bien, major de promo.</p>
           </li>
           <li>
+            <img class="logo" src="img/logo-dele.png" alt="Logo DELE" loading="lazy">
             <p class="when">2019</p>
             <h3>DELE, niveau B2</h3>
             <p>Diploma de Español como Lengua Extranjera.</p>
@@ -88,7 +93,7 @@
         <div class="h"><span>03</span><span>· Expériences</span></div>
         <div class="stack tlx">
           <details class="card">
-            <summary><div>
+            <summary><img class="logo" src="img/logo-renault.png" alt="Logo Renault Group" loading="lazy"><div>
               <p class="when">Avril – juillet 2026</p>
               <h3>Stage · Renault</h3>
               <p class="summary-desc">Outil de gestion et de monitoring pour l’Après-Vente.</p>
@@ -103,7 +108,7 @@
           </details>
 
           <details class="card">
-            <summary><div>
+            <summary><img class="logo fill" src="img/logo-visalog.png" alt="Logo Visalog" loading="lazy"><div>
               <p class="when">2025</p>
               <h3>Création d’entreprise</h3>
               <p class="summary-desc">Cabinet conseil innovant en IA et mobilité internationale.</p>
@@ -119,7 +124,7 @@
           </details>
 
           <details class="card">
-            <summary><div>
+            <summary><img class="logo" src="img/logo-facofri.png" alt="Logo Facofri" loading="lazy"><div>
               <p class="when">Juillet 2025</p>
               <h3>Stage · FACOFRI, Algérie</h3>
               <p class="summary-desc">Automatisation et pilotage d’une presse plieuse.</p>
@@ -134,7 +139,7 @@
           </details>
 
           <details class="card">
-            <summary><div>
+            <summary><img class="logo" src="img/logo-edf.png" alt="Logo EDF" loading="lazy"><div>
               <p class="when">Janvier 2025</p>
               <h3>Stage · EDF, Colombes</h3>
               <p class="summary-desc">Outil de gestion des demandes d’autorisation.</p>
@@ -164,7 +169,7 @@
           </details>
 
           <details class="card">
-            <summary><div>
+            <summary><img class="logo" src="img/logo-edf.png" alt="Logo EDF" loading="lazy"><div>
               <p class="when">2018</p>
               <h3>Stage · Filiale brésilienne d’EDF</h3>
               <p class="summary-desc">Immersion dans une entreprise française à l’étranger.</p>
@@ -255,6 +260,7 @@
               <div class="tags"><span class="tag">Robotique</span><span class="tag">Équipe</span></div>
             </div></summary>
             <div class="in">
+              <p>Gestion de projet technique et coordination d’une équipe de 10 personnes pour concevoir un robot de compétition (respect du cahier des charges et des délais).</p>
               <p>Conception du système de lancement des PAMIS (petits actionneurs mobiles indépendants), déclenché par un interrupteur magnétique.</p>
               <p>Développement d’un actionneur répondant à la contrainte de la compétition («&nbsp;faire la fête&nbsp;»).</p>
               <p>Mise à jour de la modélisation 3D des robots pour résoudre les problèmes de fermeture du châssis et simplifier sa conception grâce à un système coulissant.</p>
@@ -301,9 +307,10 @@
 
       <section id="engagement">
         <div class="h"><span>05</span><span>· Engagement</span></div>
+        <p class="lead">Mon année d’engagement associatif a été marquée par une grande polyvalence, combinant leadership technique en robotique et implication sociale au sein de la vie étudiante. Ces responsabilités transversales m’ont permis de renforcer ma maturité en gestion de projet et en management d’équipe, tout en contribuant activement à l’inclusion et au dynamisme du campus.</p>
         <div class="stack">
           <details class="card" open>
-            <summary><div>
+            <summary><img class="logo" src="img/logo-arem.png" alt="Logo AREM" loading="lazy"><div>
               <p class="when">2025 – 2026</p>
               <h3>Présidente de l’AREM</h3>
               <p class="summary-desc">Leadership technique et implication associative.</p>
@@ -313,23 +320,31 @@
               <h4>Management et gouvernance</h4>
               <ul>
                 <li>Équipe de 14 personnes, tenue des conseils d’administration.</li>
+                <li>Prise de décision stratégique avec le bureau et délégation des tâches.</li>
                 <li>Nouvel organigramme et entretiens de recrutement du mandat EI25 (environ 10 heures).</li>
               </ul>
               <h4>Partenariats</h4>
               <ul>
                 <li>Représentante légale et porte-parole auprès de l’école et des partenaires.</li>
                 <li>Subvention FDVA de 2&nbsp;300&nbsp;€ obtenue (dossier Mairie de Gardanne).</li>
+                <li>Défense du budget de l’AREM auprès des autres associations étudiantes.</li>
                 <li>Négociation avec des industriels majeurs, dont Alstom et STMicroelectronics.</li>
               </ul>
               <h4>Événements</h4>
               <ul>
-                <li>Coupe de France de Robotique 2025, préparation de 2026, Hackathon de programmation de robots.</li>
-                <li>Paquathon (50 participants) et Défi Actionneurs, initiation à la robotique pour les étudiants de première année.</li>
+                <li>Coupe de France de Robotique (CDR) 2025, suivi de la préparation de la CDR 2026.</li>
+                <li>Hackathon de programmation de robots&nbsp;: mise à jour et préparation des robots, supervision technique et accompagnement des participants pendant la compétition.</li>
+                <li>Paquathon&nbsp;: co-organisation de la première édition (50 participants) avec le BDA et Solidar’ISMIN, à l’occasion de Pâques&nbsp;: logistique, animation et coordination des activités pour les étudiants et le personnel de l’école.</li>
+                <li>Défi Actionneurs&nbsp;: conception et organisation d’un événement pédagogique en plusieurs séances pour initier les étudiants de première année à la robotique (prototype, supports explicatifs, encadrement des participants).</li>
                 <li>Intégration&nbsp;: soirée AREM, comité d’intégration, «&nbsp;Famille Verte&nbsp;».</li>
+              </ul>
+              <h4>Gestion de conflits</h4>
+              <ul>
+                <li>Résolution de situations de crise et apaisement des tensions dans des environnements à forte pression, notamment lors de la Coupe de France de Robotique (CDR).</li>
               </ul>
               <h4>Communication</h4>
               <ul>
-                <li>Kakémonos, dépliants, plaquettes, T-shirts du mandat, porte-clés imprimés en 3D.</li>
+                <li>Création et gestion de supports graphiques pour le public et les partenaires (kakémonos, dépliants, plaquette Alpha, plaquette partenariats), conception textile (T-shirts du mandat) et impression 3D des porte-clés des familles pour les activités d’intégration.</li>
               </ul>
             </div>
           </details>
@@ -346,35 +361,45 @@
           </details>
 
           <details class="card">
-            <summary><div>
+            <summary><img class="logo" src="img/logo-bds.png" alt="Logo BDS EMSE" loading="lazy"><div>
               <p class="when">2025 – 2026</p>
               <h3>Capitaine · équipe féminine de volley-ball</h3>
               <p class="summary-desc">Coordination d’équipe et planification.</p>
             </div></summary>
             <div class="in">
-              <p>Coordination de l’équipe, cohésion de groupe, planification des créneaux et interface avec les équipes adverses de la ligue universitaire.</p>
+              <ul>
+                <li>Leadership sportif&nbsp;: coordination de l’équipe, motivation et gestion de la cohésion de groupe.</li>
+                <li>Logistique&nbsp;: planification des créneaux d’entraînement et interface avec les équipes adverses pour la ligue universitaire.</li>
+              </ul>
             </div>
           </details>
 
           <details class="card">
-            <summary><div>
+            <summary><img class="logo" src="img/logo-bdi.png" alt="Logo Bureau des Élèves EMSE" loading="lazy"><div>
               <p class="when">2025 – 2026</p>
               <h3>Bureau des Internationaux</h3>
               <p class="summary-desc">Intégration des étudiants internationaux.</p>
             </div></summary>
             <div class="in">
-              <p>Accueil et intégration des étudiants internationaux, événements de promotion des cultures (repas internationaux).</p>
+              <p>Membre actif du Bureau des Internationaux, club du Bureau des Élèves.</p>
+              <ul>
+                <li>Inclusion et accueil&nbsp;: participation à l’accueil et à l’intégration des étudiants internationaux.</li>
+                <li>Accueil et intégration des étudiants internationaux, événements de promotion des cultures (repas internationaux).</li>
+              </ul>
             </div>
           </details>
 
           <details class="card">
-            <summary><div>
+            <summary><img class="logo" src="img/logo-comif.png" alt="Logo COMIF" loading="lazy"><div>
               <p class="when">2025 – 2026</p>
               <h3>COMIF · T’ipause</h3>
               <p class="summary-desc">Accueil et distribution à la cafétéria associative.</p>
             </div></summary>
             <div class="in">
-              <p>Service et accueil à la cafétéria associative, distribution de repas aux étudiants du campus (rythme bimensuel).</p>
+              <ul>
+                <li>Service et relationnel&nbsp;: accueil, service et respect des règles d’hygiène à la T’ipause (cafétéria associative).</li>
+                <li>Distribution de repas aux étudiants du campus (rythme bimensuel).</li>
+              </ul>
             </div>
           </details>
 
@@ -387,10 +412,15 @@
             <div class="in">
               <ul>
                 <li>Broyage Extrême&nbsp;: sensibilisation au recyclage du PLA lors de la journée ODD.</li>
-                <li>Fête de la Science&nbsp;: organisation sur plusieurs mois (d’avril à octobre), gestion des stands.</li>
+                <li>Fête de la Science&nbsp;: suivi de l’organisation sur plusieurs mois (d’avril à octobre), installation et gestion des stands.</li>
               </ul>
             </div>
           </details>
+
+          <div class="card">
+            <h4>Compétences développées</h4>
+            <span class="chip">Management et leadership</span><span class="chip">Gestion de projet et organisation</span><span class="chip">Négociation de partenariats</span><span class="chip">Communication</span><span class="chip">Gestion de conflits</span><span class="chip">Adaptabilité et résolution de problèmes</span>
+          </div>
         </div>
       </section>
 
@@ -464,6 +494,8 @@
     </div>
   </main>
 
+  <script src="i18n-en.js"></script>
+  <script src="i18n-pt.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
