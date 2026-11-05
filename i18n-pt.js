@@ -24,7 +24,7 @@ I18N.pt={
     "· Profil": "· Perfil",
     "Étudiante à l’École des Mines de Saint-Étienne dans le cursus Systèmes Microélectroniques et Informatique, je suis en train de compléter ma formation avec un DESS en administration des affaires à HEC Montréal afin d’acquérir une double compétence technique et managériale.": "Estudante na École des Mines de Saint-Étienne, no curso de Sistemas Microeletrônicos e Informática, estou complementando minha formação com um DESS (diploma de pós-graduação) em administração de empresas na HEC Montréal, para adquirir uma dupla competência técnica e gerencial.",
     "Nationalité française": "Nacionalidade francesa",
-    "ans · née le 12 mai 2004 à Rio de Janeiro": "anos · nascida em 12 de maio de 2004 no Rio de Janeiro",
+    "ans": "anos",
     "· Formation": "· Formação",
     "DESS en administration des affaires : double compétence technique et managériale.": "DESS em administração de empresas: dupla competência técnica e gerencial.",
     "Cursus ingénieur Systèmes Microélectroniques et Informatique. Formation de prévention des violences sexistes et sexuelles (VSS).": "Curso de engenharia em Sistemas Microeletrônicos e Informática. Formação em prevenção da violência sexista e sexual (VSS).",
