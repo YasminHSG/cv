@@ -74,6 +74,9 @@ details[open] summary:after{content:"–"}
 .tabs button{background:none;border:1px solid var(--line);color:var(--tx);border-radius:3px;padding:6px 18px;font:500 12px var(--fh);text-transform:uppercase;letter-spacing:.06em;transition:.2s}
 .tabs button:hover,.tabs button[aria-pressed=true]{background:var(--ac);color:var(--acd);border-color:var(--ac)}
 .g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.management-skills{grid-column:1/-1}
+.management-chips{display:flex;flex-wrap:wrap;gap:8px}
+.management-chips .chip{margin:0}
 .ct{text-align:center;display:grid;gap:8px;font-size:20px}.ct span{color:var(--mut);font-size:14px}
 footer{text-align:center;color:var(--mut);font-size:13px;margin-top:50px}
 @media(max-width:800px){#intro{grid-template-columns:1fr}.photo{order:-1;max-width:200px}#pj{grid-template-columns:1fr}.top nav{display:none}}
@@ -95,6 +98,8 @@ h1 b{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-c
 .h span:last-child:after{height:3px;border-radius:3px;background:linear-gradient(90deg,var(--ac),var(--ac2))}
 .tl li:before{border-color:var(--ac2);box-shadow:0 0 0 4px var(--glow)}.tl li.n:before{background:var(--ac)}
 .tag,.chip,.meta>span{border-radius:30px;background:var(--bg)}
+.language-cert{margin-top:8px;color:var(--mut);font-size:13px}
+.language-cert strong{display:inline-block;margin-left:4px;padding:3px 10px;border-radius:30px;background:linear-gradient(90deg,var(--ac),var(--ac2));color:#fff;font-weight:600}
 .tabs button{border-radius:30px}
 .tabs button:hover,.tabs button[aria-pressed=true]{background:linear-gradient(90deg,var(--ac),var(--ac2));border-color:transparent;color:#fff}
 .ecg path{stroke:var(--ac)}
@@ -159,3 +164,8 @@ a{color:var(--ac)}
 
 /* photo : l’image recouvre les initiales (qui restent en secours si photo.jpg est absente) */
 .photo>*{grid-area:1/1}
+
+/* lien vers le dépôt GitHub d’un projet */
+.repo{margin-top:14px}
+.repo a{display:inline-block;font:400 13px var(--fm);border:1px solid var(--line);border-radius:30px;padding:4px 16px;background:var(--bg);color:var(--ac2);transition:.2s}
+.repo a:hover{border-color:var(--ac);color:var(--ac);box-shadow:0 2px 10px var(--glow)}

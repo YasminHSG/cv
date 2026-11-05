@@ -80,12 +80,6 @@
             <h3>Lycée Molière, Rio de Janeiro</h3>
             <p>Baccalauréat scientifique, mention Très Bien, major de promo.</p>
           </li>
-          <li>
-            <img class="logo" src="img/logo-dele.png" alt="Logo DELE" loading="lazy">
-            <p class="when">2019</p>
-            <h3>DELE, niveau B2</h3>
-            <p>Diploma de Español como Lengua Extranjera.</p>
-          </li>
         </ol>
       </section>
 
@@ -155,20 +149,6 @@
           </details>
 
           <details class="card">
-            <summary><div>
-              <p class="when">2019 – 2021</p>
-              <h3>Soutien scolaire</h3>
-              <p class="summary-desc">Cours de mathématiques et de physique.</p>
-            </div></summary>
-            <div class="in">
-              <ul>
-                <li>Tutorat d’élèves de lycée en mathématiques et en physique pour renforcer leur compréhension des notions fondamentales.</li>
-                <li>Accompagnement personnalisé dans la préparation aux contrôles et dans la progression sur le long terme.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="card">
             <summary><img class="logo" src="img/logo-edf.png" alt="Logo EDF" loading="lazy"><div>
               <p class="when">2018</p>
               <h3>Stage · Filiale brésilienne d’EDF</h3>
@@ -207,6 +187,7 @@
               <p>Développé en SystemVerilog sous Vivado dans le cadre de mon cursus à l’École des Mines de Saint-Étienne, le système intègre une gestion précise des communications I2C et UART par machine d’états (FSM) cadencée à 50&nbsp;MHz.</p>
               <p>L’architecture s’articule autour d’un cœur de chiffrement matériel ASCON interagissant avec une RAM double port pour sécuriser les trames ECG à la volée.</p>
               <p>En aval, la chaîne est complétée par un outil logiciel développé en Python qui comprend un émulateur matériel pour les tests, assure le déchiffrement des données et propose une interface graphique de monitoring en direct, capable d’analyser l’onde ECG, de détecter le complexe PQRST et d’afficher le rythme cardiaque en temps réel.</p>
+              <p class="repo"><a href="https://github.com/YasminHSG/Monitoring-ECG-FPGA" target="_blank" rel="noopener" aria-label="Code du projet Monitoring ECG sécurisé sur GitHub">Voir le code sur GitHub ↗</a></p>
             </div>
           </details>
 
@@ -221,6 +202,7 @@
               <p>Conception et développement de bout en bout d’un circuit numérique en SystemVerilog pour garantir la confidentialité et l’authenticité des échanges de données.</p>
               <p>Modélisation des différentes couches de permutation (addition de constantes, substitution par S-box, diffusion) et création d’une machine d’états pour piloter les quatre phases clés du processus.</p>
               <p>Intégration de l’architecture globale et validation complète du système via des outils de simulation, pour assurer la fiabilité du circuit et le débogage des signaux.</p>
+              <p class="repo"><a href="https://github.com/YasminHSG/ascon-fpga" target="_blank" rel="noopener" aria-label="Code du projet Chiffrement ASCON-128 sur GitHub">Voir le code sur GitHub ↗</a></p>
             </div>
           </details>
 
@@ -235,6 +217,7 @@
               <p>Conception et développement de bout en bout d’un dispositif d’alerte IoT pour la prévention des risques, dédié au monitoring environnemental et à la mesure de la qualité de l’air.</p>
               <p>Intégration matérielle de capteurs avec indicateurs LED et transmission des données sans fil via le réseau The Things Network (LoRaWAN).</p>
               <p>Création de dashboards de supervision pour centraliser l’historique des mesures d’IAQ (Indoor Air Quality) et visualiser les données de qualité de l’air en temps réel.</p>
+              <p class="repo"><a href="https://github.com/YasminHSG/projet-iot" target="_blank" rel="noopener" aria-label="Code du projet IoT sur GitHub">Voir le code sur GitHub ↗</a></p>
             </div>
           </details>
 
@@ -403,30 +386,18 @@
             </div>
           </details>
 
-          <details class="card">
-            <summary><div>
-              <p class="when">2025</p>
-              <h3>Sensibilisation et science</h3>
-              <p class="summary-desc">Fête de la Science et recyclage du plastique (PLA).</p>
-            </div></summary>
-            <div class="in">
-              <ul>
-                <li>Broyage Extrême&nbsp;: sensibilisation au recyclage du PLA lors de la journée ODD.</li>
-                <li>Fête de la Science&nbsp;: suivi de l’organisation sur plusieurs mois (d’avril à octobre), installation et gestion des stands.</li>
-              </ul>
-            </div>
-          </details>
-
-          <div class="card">
-            <h4>Compétences développées</h4>
-            <span class="chip">Management et leadership</span><span class="chip">Gestion de projet et organisation</span><span class="chip">Négociation de partenariats</span><span class="chip">Communication</span><span class="chip">Gestion de conflits</span><span class="chip">Adaptabilité et résolution de problèmes</span>
-          </div>
         </div>
       </section>
 
       <section id="competences">
         <div class="h"><span>06</span><span>· Compétences</span></div>
         <div class="g2">
+          <div class="card management-skills">
+            <h4>Management</h4>
+            <div class="management-chips">
+              <span class="chip">Management et leadership</span><span class="chip">Gestion de projet et organisation</span><span class="chip">Négociation de partenariats</span><span class="chip">Communication</span><span class="chip">Gestion de conflits</span><span class="chip">Adaptabilité et résolution de problèmes</span>
+            </div>
+          </div>
           <div class="card">
             <h4>Programmation</h4>
             <span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">SystemVerilog</span><span class="chip">Bash</span><span class="chip">SQL</span>
@@ -441,7 +412,7 @@
           </div>
           <div class="card">
             <h4>Autres outils</h4>
-            <span class="chip">LaTeX</span><span class="chip">MS Office</span>
+            <span class="chip">LaTeX</span><span class="chip">MS Office</span><span class="chip">SharePoint</span><span class="chip">Power Automate</span><span class="chip">Looker</span>
           </div>
         </div>
       </section>
@@ -455,7 +426,8 @@
           </div>
           <div class="card">
             <h4>Niveau avancé</h4>
-            <span class="chip">Anglais (C1)</span><span class="chip">Espagnol (B2, DELE)</span>
+            <span class="chip">Anglais (C1)</span><span class="chip">Espagnol (B2)</span>
+            <p class="language-cert">Certification officielle : <strong>DELE · niveau B2</strong></p>
           </div>
           <div class="card">
             <h4>Niveau élémentaire</h4>
