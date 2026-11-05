@@ -156,7 +156,6 @@ I18N.en={
     "Amérique du Nord": "North America",
     "Amérique du Sud": "South America",
     "Volley-ball": "Volleyball",
-    "Mon année d’engagement associatif a été marquée par une grande polyvalence, combinant leadership technique en robotique et implication sociale au sein de la vie étudiante. Ces responsabilités transversales m’ont permis de renforcer ma maturité en gestion de projet et en management d’équipe, tout en contribuant activement à l’inclusion et au dynamisme du campus.": "My year of involvement in student associations was marked by great versatility, combining technical leadership in robotics with social involvement in student life. These cross-functional responsibilities strengthened my maturity in project management and team management, while actively contributing to the inclusion and vitality of the campus.",
     "Prise de décision stratégique avec le bureau et délégation des tâches.": "Strategic decision-making with the executive board and delegation of tasks.",
     "Défense du budget de l’AREM auprès des autres associations étudiantes.": "Defended the AREM budget before the other student associations.",
     "Coupe de France de Robotique (CDR) 2025, suivi de la préparation de la CDR 2026.": "French Robotics Cup (CDR) 2025, follow-up of the 2026 CDR preparation.",

@@ -161,7 +161,6 @@ I18N.pt={
     "Volley-ball": "Vôlei",
     "Europe": "Europa",
     "· Contact": "· Contato",
-    "Mon année d’engagement associatif a été marquée par une grande polyvalence, combinant leadership technique en robotique et implication sociale au sein de la vie étudiante. Ces responsabilités transversales m’ont permis de renforcer ma maturité en gestion de projet et en management d’équipe, tout en contribuant activement à l’inclusion et au dynamisme du campus.": "Meu ano de engajamento associativo foi marcado por grande versatilidade, combinando liderança técnica em robótica e atuação social na vida estudantil. Essas responsabilidades transversais me permitiram fortalecer minha maturidade em gestão de projetos e liderança de equipes, contribuindo ativamente para a inclusão e o dinamismo do campus.",
     "Prise de décision stratégique avec le bureau et délégation des tâches.": "Tomada de decisões estratégicas com a diretoria e delegação de tarefas.",
     "Défense du budget de l’AREM auprès des autres associations étudiantes.": "Defesa do orçamento da AREM perante as demais associações estudantis.",
     "Coupe de France de Robotique (CDR) 2025, suivi de la préparation de la CDR 2026.": "Copa da França de Robótica (CDR) 2025, acompanhamento da preparação da CDR 2026.",
