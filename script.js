@@ -9,7 +9,7 @@ root.dataset.theme='light';try{var s=localStorage.getItem('theme');if(s)root.dat
 th&&th.addEventListener('click',function(){var t=root.dataset.theme==='light'?'dark':'light';root.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){}});
 // Langues : les traductions sont dans i18n-en.js et i18n-pt.js (window.I18N)
 var I18N=window.I18N||{},
-FR_WORDS=['FPGA & SystemVerilog','Systèmes embarqués','Robotique','Management & leadership'],
+FR_WORDS=['Management & Stratégie','Pilotage de projets','Systèmes embarqués & FPGA','Robotique & Innovation'],
 HTML_LANG={fr:'fr',en:'en',pt:'pt-BR'};
 // Texte qui s'écrit
 (function(){var el=document.getElementById('rot');if(!el)return;
@@ -28,6 +28,15 @@ document.querySelectorAll('section[id]').forEach(function(s){io.observe(s)});
 // Apparition de la ligne temporelle
 var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');rv.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.tlx>.card').forEach(function(c){rv.observe(c)});
+
+// Halo subtil qui suit le curseur sur les cartes Bento
+document.querySelectorAll('.card').forEach(function(c){
+  c.addEventListener('mousemove',function(e){
+    var r=c.getBoundingClientRect();
+    c.style.setProperty('--mx',(e.clientX-r.left)+'px');
+    c.style.setProperty('--my',(e.clientY-r.top)+'px');
+  });
+});
 
 // Traduction FR / EN / PT-BR
 var txt=[],tw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){

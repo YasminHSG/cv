@@ -4,7 +4,7 @@ I18N.en={
   title:'Yasmin Hadj-Said · Microelectronic Systems & Computer Engineer',
   desc:'Engineering student at École des Mines de Saint-Étienne: FPGA, embedded systems, robotics, management.',
   aria:{th:'Toggle theme',tabs:'Filter projects'},
-  words:['FPGA & SystemVerilog','Embedded systems','Robotics','Management & leadership'],
+  words:['Management & Strategy','Project Management','Embedded Systems & FPGA','Robotics & Innovation'],
   t:{
     "Profil": "Profile",
     "Formation": "Education",
